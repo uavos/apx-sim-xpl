@@ -1,0 +1,7 @@
+uavos/pump1_switch
+uavos/pump2_switch
+uavos/pump1_value
+uavos/pump2_value
+uavos/clutch_value
+uavos/bat_value
+uavos/bat_on
