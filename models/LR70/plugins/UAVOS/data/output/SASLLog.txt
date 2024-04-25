@@ -1,0 +1,9 @@
+[LR70 INFO]: Initializing...
+[LR70 INFO]: [DISPLAY] Main Screen Bounds: 0, 0, 1024, 692
+[LR70 INFO]: Path to module: /Users/carbonloft/X-Plane 11/Aircraft/APX/LR70_0404/plugins/UAVOS/data/modules/main.lua
+[LR70 INFO]: Loading module...
+[LR70 INFO]: [LUA]: loading	module
+[LR70 INFO]: Module loaded
+[LR70 WARN]: Enable/disable aircraft 3D panel usage explicitly (sasl.options.setAircraftPanelRendering)
+[LR70 WARN]: Enable/disable 3D rendering explicitly (sasl.options.set3DRendering)
+[LR70 WARN]: Enable/disable interactivity option explicitly (sasl.options.setInteractivity)
