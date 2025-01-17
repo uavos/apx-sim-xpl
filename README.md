@@ -4,6 +4,8 @@ This repository contains the aircraft models and files for the [X-Plane flight s
 
 Models are developed by `UAVOS` and are used in the [APX Autopilot](https://docs.uavos.com/) for simulation and testing purposes.
 
+> The minimum X-Plane version required is 12.
+
 ## Models
 
 - [LR70](models/LR70) - UAV Helicopter 23 kg MTOW with diesel engine and electric tail rotor.
