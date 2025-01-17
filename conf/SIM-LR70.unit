@@ -2,6 +2,7 @@
     "nodes": [
         {
             "dict": {
+                "cache": "74BAB7EE",
                 "fields": [
                     {
                         "name": "label",
@@ -108,6 +109,36 @@
                         "units": "off,on"
                     },
                     {
+                        "name": "telemetry.data.usrb",
+                        "title": "usrb",
+                        "type": "option",
+                        "units": "off,on"
+                    },
+                    {
+                        "name": "telemetry.data.usrc",
+                        "title": "usrc",
+                        "type": "option",
+                        "units": "off,on"
+                    },
+                    {
+                        "name": "telemetry.data.usrw",
+                        "title": "usrw",
+                        "type": "option",
+                        "units": "off,on"
+                    },
+                    {
+                        "name": "telemetry.data.usrf",
+                        "title": "usrf",
+                        "type": "option",
+                        "units": "off,on"
+                    },
+                    {
+                        "name": "telemetry.data.usrx",
+                        "title": "usrx",
+                        "type": "option",
+                        "units": "off,on"
+                    },
+                    {
                         "name": "telemetry.data.srcs",
                         "title": "srcs",
                         "type": "option",
@@ -126,12 +157,6 @@
                         "units": "off,on"
                     },
                     {
-                        "name": "telemetry.data.turret",
-                        "title": "turret",
-                        "type": "option",
-                        "units": "off,on"
-                    },
-                    {
                         "name": "telemetry.data.haps",
                         "title": "haps",
                         "type": "option",
@@ -144,444 +169,442 @@
                         "type": "bind"
                     },
                     {
-                        "name": "vehicle",
-                        "title": "Vehicle",
+                        "name": "ins",
+                        "title": "INS",
                         "type": "group"
                     },
                     {
-                        "name": "vehicle.type",
-                        "title": "type",
-                        "type": "option",
-                        "units": "CTOL,VTOL"
-                    },
-                    {
-                        "name": "vehicle.init",
-                        "title": "init",
-                        "type": "group"
-                    },
-                    {
-                        "array": 16,
-                        "name": "vehicle.init.bind",
-                        "title": "bind",
-                        "type": "bind"
-                    },
-                    {
-                        "array": 16,
-                        "name": "vehicle.init.value",
-                        "title": "value",
-                        "type": "real"
-                    },
-                    {
-                        "name": "vehicle.speed",
-                        "title": "speed",
-                        "type": "group"
-                    },
-                    {
-                        "name": "vehicle.speed.VC",
-                        "title": "VC",
-                        "type": "real",
-                        "units": "m/s"
-                    },
-                    {
-                        "name": "vehicle.speed.VSO",
-                        "title": "VSO",
-                        "type": "real",
-                        "units": "m/s"
-                    },
-                    {
-                        "name": "vehicle.speed.VSI",
-                        "title": "VSI",
-                        "type": "real",
-                        "units": "m/s"
-                    },
-                    {
-                        "name": "vehicle.speed.VFE",
-                        "title": "VFE",
-                        "type": "real",
-                        "units": "m/s"
-                    },
-                    {
-                        "name": "vehicle.speed.VY",
-                        "title": "VY",
-                        "type": "real",
-                        "units": "m/s"
-                    },
-                    {
-                        "name": "vehicle.speed.VNO",
-                        "title": "VNO",
-                        "type": "real",
-                        "units": "m/s"
-                    },
-                    {
-                        "name": "vehicle.speed.VNE",
-                        "title": "VNE",
-                        "type": "real",
-                        "units": "m/s"
-                    },
-                    {
-                        "name": "vehicle.speed.GS",
-                        "title": "GS",
-                        "type": "real",
-                        "units": "m/s"
-                    },
-                    {
-                        "name": "vehicle.altitude",
-                        "title": "altitude",
-                        "type": "word",
-                        "units": "m"
-                    },
-                    {
-                        "name": "vehicle.radius",
-                        "title": "radius",
-                        "type": "word",
-                        "units": "m"
-                    },
-                    {
-                        "name": "vehicle.ld",
-                        "title": "ld",
-                        "type": "real"
-                    },
-                    {
-                        "name": "vehicle.climb",
-                        "title": "climb",
-                        "type": "real",
-                        "units": "m/s"
-                    },
-                    {
-                        "name": "vehicle.sink",
-                        "title": "sink",
-                        "type": "real",
-                        "units": "m/s"
-                    },
-                    {
-                        "name": "vehicle.acc",
-                        "title": "acc",
-                        "type": "byte",
-                        "units": "m/s^2"
-                    },
-                    {
-                        "name": "vehicle.mtow",
-                        "title": "mtow",
-                        "type": "word",
-                        "units": "kg"
-                    },
-                    {
-                        "name": "vehicle.fuel",
-                        "title": "fuel",
-                        "type": "word",
-                        "units": "kg"
-                    },
-                    {
-                        "name": "vehicle.endurance",
-                        "title": "endurance",
-                        "type": "word",
-                        "units": "min"
-                    },
-                    {
-                        "name": "ahrs",
-                        "title": "AHRS",
-                        "type": "group"
-                    },
-                    {
-                        "name": "ahrs.rebias",
+                        "name": "ins.rebias",
                         "title": "Reset IMU bias",
                         "type": "command"
                     },
                     {
-                        "name": "ahrs.reset",
+                        "name": "ins.remag",
+                        "title": "Reset magnetometer",
+                        "type": "command"
+                    },
+                    {
+                        "name": "ins.reset",
                         "title": "Full reset",
                         "type": "command"
                     },
                     {
-                        "name": "ahrs.mode",
+                        "name": "ins.mode",
                         "title": "mode",
                         "type": "option",
                         "units": "off,local,primary,secondary,failsafe,auxillary"
                     },
                     {
-                        "name": "ahrs.align",
+                        "name": "ins.debug",
+                        "title": "debug",
+                        "type": "option",
+                        "units": "off,info,status,full"
+                    },
+                    {
+                        "name": "ins.align",
                         "title": "align",
                         "type": "group"
                     },
                     {
-                        "name": "ahrs.align.roll",
+                        "name": "ins.align.roll",
                         "title": "roll",
                         "type": "real",
                         "units": "deg"
                     },
                     {
-                        "name": "ahrs.align.pitch",
+                        "name": "ins.align.pitch",
                         "title": "pitch",
                         "type": "real",
                         "units": "deg"
                     },
                     {
-                        "name": "ahrs.align.yaw",
+                        "name": "ins.align.yaw",
                         "title": "yaw",
                         "type": "real",
                         "units": "deg"
                     },
                     {
-                        "name": "ahrs.offset",
+                        "name": "ins.offset",
                         "title": "offset",
                         "type": "group"
                     },
                     {
-                        "name": "ahrs.offset.imu",
+                        "name": "ins.offset.imu",
                         "title": "imu",
                         "type": "group"
                     },
                     {
-                        "name": "ahrs.offset.imu.x",
+                        "name": "ins.offset.imu.x",
                         "title": "x",
                         "type": "real",
                         "units": "m"
                     },
                     {
-                        "name": "ahrs.offset.imu.y",
+                        "name": "ins.offset.imu.y",
                         "title": "y",
                         "type": "real",
                         "units": "m"
                     },
                     {
-                        "name": "ahrs.offset.imu.z",
+                        "name": "ins.offset.imu.z",
                         "title": "z",
                         "type": "real",
                         "units": "m"
                     },
                     {
-                        "name": "ahrs.offset.gps",
+                        "name": "ins.offset.gps",
                         "title": "gps",
                         "type": "group"
                     },
                     {
-                        "name": "ahrs.offset.gps.x",
+                        "name": "ins.offset.gps.x",
                         "title": "x",
                         "type": "real",
                         "units": "m"
                     },
                     {
-                        "name": "ahrs.offset.gps.y",
+                        "name": "ins.offset.gps.y",
                         "title": "y",
                         "type": "real",
                         "units": "m"
                     },
                     {
-                        "name": "ahrs.offset.gps.z",
+                        "name": "ins.offset.gps.z",
                         "title": "z",
                         "type": "real",
                         "units": "m"
                     },
                     {
-                        "name": "ahrs.offset.rng",
+                        "name": "ins.offset.rng",
                         "title": "rng",
                         "type": "group"
                     },
                     {
-                        "name": "ahrs.offset.rng.x",
+                        "name": "ins.offset.rng.x",
                         "title": "x",
                         "type": "real",
                         "units": "m"
                     },
                     {
-                        "name": "ahrs.offset.rng.y",
+                        "name": "ins.offset.rng.y",
                         "title": "y",
                         "type": "real",
                         "units": "m"
                     },
                     {
-                        "name": "ahrs.offset.rng.z",
+                        "name": "ins.offset.rng.z",
                         "title": "z",
                         "type": "real",
                         "units": "m"
                     },
                     {
-                        "name": "ahrs.offset.flow",
+                        "name": "ins.offset.flow",
                         "title": "flow",
                         "type": "group"
                     },
                     {
-                        "name": "ahrs.offset.flow.x",
+                        "name": "ins.offset.flow.x",
                         "title": "x",
                         "type": "real",
                         "units": "m"
                     },
                     {
-                        "name": "ahrs.offset.flow.y",
+                        "name": "ins.offset.flow.y",
                         "title": "y",
                         "type": "real",
                         "units": "m"
                     },
                     {
-                        "name": "ahrs.offset.flow.z",
+                        "name": "ins.offset.flow.z",
                         "title": "z",
                         "type": "real",
                         "units": "m"
                     },
                     {
-                        "name": "ahrs.offset.ev",
+                        "name": "ins.offset.ev",
                         "title": "ev",
                         "type": "group"
                     },
                     {
-                        "name": "ahrs.offset.ev.x",
+                        "name": "ins.offset.ev.x",
                         "title": "x",
                         "type": "real",
                         "units": "m"
                     },
                     {
-                        "name": "ahrs.offset.ev.y",
+                        "name": "ins.offset.ev.y",
                         "title": "y",
                         "type": "real",
                         "units": "m"
                     },
                     {
-                        "name": "ahrs.offset.ev.z",
+                        "name": "ins.offset.ev.z",
                         "title": "z",
                         "type": "real",
                         "units": "m"
                     },
                     {
-                        "name": "ahrs.gyro",
+                        "name": "ins.gyro",
                         "title": "gyro",
                         "type": "group"
                     },
                     {
-                        "name": "ahrs.gyro.lpf",
+                        "name": "ins.gyro.lpf",
                         "title": "lpf",
                         "type": "word",
                         "units": "Hz"
                     },
                     {
-                        "name": "ahrs.gyro.nf",
+                        "name": "ins.gyro.nf",
                         "title": "nf",
                         "type": "word",
                         "units": "Hz"
                     },
                     {
-                        "name": "ahrs.gyro.nfbw",
+                        "name": "ins.gyro.nfbw",
                         "title": "nfbw",
                         "type": "word",
                         "units": "Hz"
                     },
                     {
-                        "name": "ahrs.gyro.dlpf",
+                        "name": "ins.gyro.dlpf",
                         "title": "dlpf",
                         "type": "word",
                         "units": "Hz"
                     },
                     {
-                        "name": "ahrs.acc",
+                        "name": "ins.acc",
                         "title": "acc",
                         "type": "group"
                     },
                     {
-                        "name": "ahrs.acc.lpf",
+                        "name": "ins.acc.lpf",
                         "title": "lpf",
                         "type": "word",
                         "units": "Hz"
                     },
                     {
-                        "name": "ahrs.agl",
+                        "name": "ins.agl",
                         "title": "agl",
                         "type": "group"
                     },
                     {
-                        "name": "ahrs.agl.min",
+                        "name": "ins.agl.min",
                         "title": "min",
                         "type": "real",
                         "units": "m"
                     },
                     {
-                        "name": "ahrs.agl.max",
+                        "name": "ins.agl.max",
                         "title": "max",
                         "type": "word",
                         "units": "m"
                     },
                     {
-                        "name": "ahrs.agl.spd",
+                        "name": "ins.agl.spd",
                         "title": "spd",
                         "type": "word",
                         "units": "m/s"
                     },
                     {
-                        "name": "ahrs.agl.gnd",
+                        "name": "ins.agl.gnd",
                         "title": "gnd",
                         "type": "real",
                         "units": "m"
                     },
                     {
-                        "name": "ahrs.agl.aid",
+                        "name": "ins.agl.aid",
                         "title": "aid",
                         "type": "word",
                         "units": "m"
                     },
                     {
-                        "name": "ahrs.air",
+                        "name": "ins.air",
                         "title": "air",
                         "type": "group"
                     },
                     {
-                        "name": "ahrs.air.airspeed",
-                        "title": "airspeed",
-                        "type": "option",
-                        "units": "sensor,vel"
-                    },
-                    {
-                        "name": "ahrs.air.err",
-                        "title": "err",
-                        "type": "real",
-                        "units": "m/s"
-                    },
-                    {
-                        "name": "ahrs.air.proc",
-                        "title": "proc",
-                        "type": "real"
-                    },
-                    {
-                        "name": "ahrs.air.bias",
-                        "title": "bias",
-                        "type": "real"
-                    },
-                    {
-                        "name": "ahrs.air.lpf",
-                        "title": "lpf",
-                        "type": "real"
-                    },
-                    {
-                        "name": "ahrs.air.baro",
+                        "name": "ins.air.baro",
                         "title": "baro",
                         "type": "option",
                         "units": "sensor,off"
                     },
                     {
-                        "name": "ahrs.air.slip",
-                        "title": "slip",
+                        "name": "ins.air.pitot",
+                        "title": "pitot",
                         "type": "option",
-                        "units": "acc,sensor"
+                        "units": "sensor,mandala,raw,blocked"
                     },
                     {
-                        "name": "ahrs.air.stab",
-                        "title": "stab",
-                        "type": "word"
+                        "name": "ins.air.min",
+                        "title": "min",
+                        "type": "byte",
+                        "units": "m/s"
                     },
                     {
-                        "name": "ahrs.mag",
+                        "name": "ins.mag",
                         "title": "mag",
-                        "type": "option",
-                        "units": "auto,HDG,3D,INDOOR,disable"
+                        "type": "group"
                     },
                     {
-                        "name": "ahrs.hsrc",
+                        "name": "ins.mag.est",
+                        "title": "est",
+                        "type": "option",
+                        "units": "auto,heading,init,disable"
+                    },
+                    {
+                        "name": "ins.mag.decl",
+                        "title": "decl",
+                        "type": "option",
+                        "units": "auto,constant,mandala,disabled"
+                    },
+                    {
+                        "name": "ins.mag.dv",
+                        "title": "dv",
+                        "type": "real",
+                        "units": "deg"
+                    },
+                    {
+                        "name": "ins.hsrc",
                         "title": "hsrc",
                         "type": "option",
                         "units": "baro,gps,range,vision"
                     },
                     {
-                        "name": "ahrs.bearing",
-                        "title": "bearing",
+                        "name": "ins.tune",
+                        "title": "tune",
+                        "type": "group"
+                    },
+                    {
+                        "name": "ins.tune.stats",
+                        "title": "stats",
                         "type": "option",
-                        "units": "vel,yaw"
+                        "units": "off,on"
+                    },
+                    {
+                        "name": "ins.tune.acc",
+                        "title": "acc",
+                        "type": "group"
+                    },
+                    {
+                        "name": "ins.tune.acc.noise",
+                        "title": "noise",
+                        "type": "real"
+                    },
+                    {
+                        "name": "ins.tune.acc.bias_p_noise",
+                        "title": "bias_p_noise",
+                        "type": "real"
+                    },
+                    {
+                        "name": "ins.tune.gyro",
+                        "title": "gyro",
+                        "type": "group"
+                    },
+                    {
+                        "name": "ins.tune.gyro.noise",
+                        "title": "noise",
+                        "type": "real"
+                    },
+                    {
+                        "name": "ins.tune.gyro.bias_p_noise",
+                        "title": "bias_p_noise",
+                        "type": "real"
+                    },
+                    {
+                        "name": "ins.tune.gyro.bias_lim",
+                        "title": "bias_lim",
+                        "type": "real"
+                    },
+                    {
+                        "name": "ins.tune.baro",
+                        "title": "baro",
+                        "type": "group"
+                    },
+                    {
+                        "name": "ins.tune.baro.innov_gate",
+                        "title": "innov_gate",
+                        "type": "real"
+                    },
+                    {
+                        "name": "ins.tune.gravity",
+                        "title": "gravity",
+                        "type": "group"
+                    },
+                    {
+                        "name": "ins.tune.gravity.noise",
+                        "title": "noise",
+                        "type": "real"
+                    },
+                    {
+                        "name": "ins.tune.learning_control",
+                        "title": "learning_control",
+                        "type": "group"
+                    },
+                    {
+                        "name": "ins.tune.learning_control.lim",
+                        "title": "lim",
+                        "type": "real"
+                    },
+                    {
+                        "name": "ins.tune.learning_control.learn_acc_lim",
+                        "title": "learn_acc_lim",
+                        "type": "real"
+                    },
+                    {
+                        "name": "ins.tune.learning_control.learn_gyr_lim",
+                        "title": "learn_gyr_lim",
+                        "type": "real"
+                    },
+                    {
+                        "name": "ins.tune.learning_control.learn_tc",
+                        "title": "learn_tc",
+                        "type": "real"
+                    },
+                    {
+                        "name": "ins.tune.gps",
+                        "title": "gps",
+                        "type": "group"
+                    },
+                    {
+                        "name": "ins.tune.gps.vel_noise",
+                        "title": "vel_noise",
+                        "type": "real"
+                    },
+                    {
+                        "name": "ins.tune.gps.pos_noise",
+                        "title": "pos_noise",
+                        "type": "real"
+                    },
+                    {
+                        "name": "ins.tune.gps.vel_innov_gate",
+                        "title": "vel_innov_gate",
+                        "type": "real"
+                    },
+                    {
+                        "name": "ins.tune.gps.pos_innov_gate",
+                        "title": "pos_innov_gate",
+                        "type": "real"
+                    },
+                    {
+                        "name": "ins.tune.mag",
+                        "title": "mag",
+                        "type": "group"
+                    },
+                    {
+                        "name": "ins.tune.mag.mag_noise",
+                        "title": "mag_noise",
+                        "type": "real"
+                    },
+                    {
+                        "name": "ins.tune.mag.mag_innov_gate",
+                        "title": "mag_innov_gate",
+                        "type": "real"
+                    },
+                    {
+                        "name": "ins.tune.mag.mag_acc_gate",
+                        "title": "mag_acc_gate",
+                        "type": "real"
                     },
                     {
                         "name": "shiva",
@@ -593,6 +616,135 @@
                         "title": "mode",
                         "type": "option",
                         "units": "off,local,primary,secondary,failsafe,auxillary"
+                    },
+                    {
+                        "name": "shiva.init",
+                        "title": "init",
+                        "type": "group"
+                    },
+                    {
+                        "array": 16,
+                        "name": "shiva.init.bind",
+                        "title": "bind",
+                        "type": "bind"
+                    },
+                    {
+                        "array": 16,
+                        "name": "shiva.init.value",
+                        "title": "value",
+                        "type": "real"
+                    },
+                    {
+                        "name": "shiva.perf",
+                        "title": "Perf",
+                        "type": "group"
+                    },
+                    {
+                        "name": "shiva.perf.type",
+                        "title": "type",
+                        "type": "option",
+                        "units": "CTOL,VTOL"
+                    },
+                    {
+                        "name": "shiva.perf.VC",
+                        "title": "VC",
+                        "type": "real",
+                        "units": "m/s"
+                    },
+                    {
+                        "name": "shiva.perf.VSO",
+                        "title": "VSO",
+                        "type": "real",
+                        "units": "m/s"
+                    },
+                    {
+                        "name": "shiva.perf.VSI",
+                        "title": "VSI",
+                        "type": "real",
+                        "units": "m/s"
+                    },
+                    {
+                        "name": "shiva.perf.VFE",
+                        "title": "VFE",
+                        "type": "real",
+                        "units": "m/s"
+                    },
+                    {
+                        "name": "shiva.perf.VY",
+                        "title": "VY",
+                        "type": "real",
+                        "units": "m/s"
+                    },
+                    {
+                        "name": "shiva.perf.VNO",
+                        "title": "VNO",
+                        "type": "real",
+                        "units": "m/s"
+                    },
+                    {
+                        "name": "shiva.perf.VNE",
+                        "title": "VNE",
+                        "type": "real",
+                        "units": "m/s"
+                    },
+                    {
+                        "name": "shiva.perf.GS",
+                        "title": "GS",
+                        "type": "real",
+                        "units": "m/s"
+                    },
+                    {
+                        "name": "shiva.perf.altitude",
+                        "title": "altitude",
+                        "type": "word",
+                        "units": "m"
+                    },
+                    {
+                        "name": "shiva.perf.radius",
+                        "title": "radius",
+                        "type": "word",
+                        "units": "m"
+                    },
+                    {
+                        "name": "shiva.perf.ld",
+                        "title": "ld",
+                        "type": "real"
+                    },
+                    {
+                        "name": "shiva.perf.climb",
+                        "title": "climb",
+                        "type": "real",
+                        "units": "m/s"
+                    },
+                    {
+                        "name": "shiva.perf.sink",
+                        "title": "sink",
+                        "type": "real",
+                        "units": "m/s"
+                    },
+                    {
+                        "name": "shiva.perf.acc",
+                        "title": "acc",
+                        "type": "byte",
+                        "units": "m/s^2"
+                    },
+                    {
+                        "name": "shiva.perf.mtow",
+                        "title": "mtow",
+                        "type": "word",
+                        "units": "kg"
+                    },
+                    {
+                        "name": "shiva.perf.fuel",
+                        "title": "fuel",
+                        "type": "word",
+                        "units": "kg"
+                    },
+                    {
+                        "name": "shiva.perf.endurance",
+                        "title": "endurance",
+                        "type": "word",
+                        "units": "min"
                     },
                     {
                         "name": "shiva.roll",
@@ -951,6 +1103,12 @@
                         "units": "%"
                     },
                     {
+                        "name": "shiva.yaw.trim.zero",
+                        "title": "zero",
+                        "type": "real",
+                        "units": "%"
+                    },
+                    {
                         "name": "shiva.yaw.gain",
                         "title": "gain",
                         "type": "group"
@@ -971,12 +1129,23 @@
                         "type": "real"
                     },
                     {
-                        "name": "shiva.yaw.gain.slip",
+                        "name": "shiva.yaw.slip",
                         "title": "slip",
+                        "type": "group"
+                    },
+                    {
+                        "name": "shiva.yaw.slip.type",
+                        "title": "type",
+                        "type": "option",
+                        "units": "acc,sensor"
+                    },
+                    {
+                        "name": "shiva.yaw.slip.gain",
+                        "title": "gain",
                         "type": "real"
                     },
                     {
-                        "name": "shiva.yaw.gain.turn",
+                        "name": "shiva.yaw.slip.turn",
                         "title": "turn",
                         "type": "real"
                     },
@@ -1021,8 +1190,14 @@
                         "units": "optimized,shortest"
                     },
                     {
+                        "name": "shiva.bearing.est",
+                        "title": "est",
+                        "type": "option",
+                        "units": "vel,yaw"
+                    },
+                    {
                         "name": "shiva.spd",
-                        "title": "Airspeed",
+                        "title": "Speed",
                         "type": "group"
                     },
                     {
@@ -1057,6 +1232,38 @@
                         "title": "slew",
                         "type": "real",
                         "units": "m/s^2"
+                    },
+                    {
+                        "name": "shiva.spd.est",
+                        "title": "est",
+                        "type": "group"
+                    },
+                    {
+                        "name": "shiva.spd.est.type",
+                        "title": "type",
+                        "type": "option",
+                        "units": "sensor,vel"
+                    },
+                    {
+                        "name": "shiva.spd.est.err",
+                        "title": "err",
+                        "type": "real",
+                        "units": "m/s"
+                    },
+                    {
+                        "name": "shiva.spd.est.proc",
+                        "title": "proc",
+                        "type": "real"
+                    },
+                    {
+                        "name": "shiva.spd.est.bias",
+                        "title": "bias",
+                        "type": "real"
+                    },
+                    {
+                        "name": "shiva.spd.est.lpf",
+                        "title": "lpf",
+                        "type": "real"
                     },
                     {
                         "name": "shiva.alt",
@@ -1126,35 +1333,24 @@
                         "type": "real"
                     },
                     {
-                        "name": "shiva.eng.Kff",
+                        "name": "shiva.eng.gain",
+                        "title": "gain",
+                        "type": "group"
+                    },
+                    {
+                        "name": "shiva.eng.gain.Kff",
                         "title": "Kff",
+                        "type": "real"
+                    },
+                    {
+                        "name": "shiva.eng.gain.min",
+                        "title": "min",
                         "type": "real"
                     },
                     {
                         "name": "shiva.eng.rpm",
                         "title": "rpm",
                         "type": "group"
-                    },
-                    {
-                        "name": "shiva.eng.rpm.filter",
-                        "title": "filter",
-                        "type": "group"
-                    },
-                    {
-                        "name": "shiva.eng.rpm.filter.err",
-                        "title": "err",
-                        "type": "word",
-                        "units": "rpm"
-                    },
-                    {
-                        "name": "shiva.eng.rpm.filter.proc",
-                        "title": "proc",
-                        "type": "real"
-                    },
-                    {
-                        "name": "shiva.eng.rpm.filter.rate",
-                        "title": "rate",
-                        "type": "real"
                     },
                     {
                         "name": "shiva.eng.rpm.cruise",
@@ -1185,6 +1381,27 @@
                         "title": "start",
                         "type": "word",
                         "units": "rpm/s"
+                    },
+                    {
+                        "name": "shiva.eng.rpm.filter",
+                        "title": "filter",
+                        "type": "group"
+                    },
+                    {
+                        "name": "shiva.eng.rpm.filter.err",
+                        "title": "err",
+                        "type": "word",
+                        "units": "rpm"
+                    },
+                    {
+                        "name": "shiva.eng.rpm.filter.proc",
+                        "title": "proc",
+                        "type": "real"
+                    },
+                    {
+                        "name": "shiva.eng.rpm.filter.rate",
+                        "title": "rate",
+                        "type": "real"
                     },
                     {
                         "name": "shiva.eng.thr",
@@ -1273,6 +1490,29 @@
                         "name": "shiva.eng.glider.Ki",
                         "title": "Ki",
                         "type": "real"
+                    },
+                    {
+                        "name": "shiva.eng.starter",
+                        "title": "starter",
+                        "type": "group"
+                    },
+                    {
+                        "name": "shiva.eng.starter.pause",
+                        "title": "pause",
+                        "type": "real",
+                        "units": "s"
+                    },
+                    {
+                        "name": "shiva.eng.starter.time",
+                        "title": "time",
+                        "type": "real",
+                        "units": "s"
+                    },
+                    {
+                        "name": "shiva.eng.starter.thr",
+                        "title": "thr",
+                        "type": "byte",
+                        "units": "%"
                     },
                     {
                         "name": "shiva.taxi",
@@ -1448,12 +1688,6 @@
                         "units": "deg"
                     },
                     {
-                        "name": "shiva.hover.pitch.vel",
-                        "title": "vel",
-                        "type": "real",
-                        "units": "m/s"
-                    },
-                    {
                         "name": "shiva.hover.roll",
                         "title": "roll",
                         "type": "group"
@@ -1485,12 +1719,6 @@
                         "units": "deg"
                     },
                     {
-                        "name": "shiva.hover.roll.vel",
-                        "title": "vel",
-                        "type": "real",
-                        "units": "m/s"
-                    },
-                    {
                         "name": "shiva.safety",
                         "title": "Safety",
                         "type": "group"
@@ -1502,20 +1730,9 @@
                         "units": "s"
                     },
                     {
-                        "name": "shiva.safety.loiter",
-                        "title": "loiter",
-                        "type": "group"
-                    },
-                    {
-                        "name": "shiva.safety.loiter.circles",
-                        "title": "circles",
-                        "type": "byte"
-                    },
-                    {
-                        "name": "shiva.safety.loiter.time",
-                        "title": "time",
-                        "type": "word",
-                        "units": "min"
+                        "name": "shiva.safety.stab",
+                        "title": "stab",
+                        "type": "word"
                     },
                     {
                         "name": "shiva.takeoff",
@@ -1575,6 +1792,12 @@
                         "units": "%/s"
                     },
                     {
+                        "name": "shiva.takeoff.run.rud",
+                        "title": "rud",
+                        "type": "option",
+                        "units": "off,on"
+                    },
+                    {
                         "name": "shiva.takeoff.climb",
                         "title": "climb",
                         "type": "group"
@@ -1630,6 +1853,12 @@
                         "title": "mode",
                         "type": "option",
                         "units": "runway,parachute,helipad"
+                    },
+                    {
+                        "name": "shiva.landing.hsrc",
+                        "title": "hsrc",
+                        "type": "option",
+                        "units": "default,gps"
                     },
                     {
                         "name": "shiva.landing.agl",
@@ -1951,12 +2180,6 @@
                         "units": "10ms,50ms,100ms"
                     },
                     {
-                        "name": "protocols.srvas.interface",
-                        "title": "interface",
-                        "type": "option",
-                        "units": "BUS,VCP"
-                    },
-                    {
                         "name": "protocols.srvas.ctr",
                         "title": "ctr",
                         "type": "group"
@@ -2035,6 +2258,11 @@
                         "name": "protocols.volz.ctr.pos",
                         "title": "pos",
                         "type": "bind"
+                    },
+                    {
+                        "name": "protocols.volz.cnt",
+                        "title": "cnt",
+                        "type": "byte"
                     },
                     {
                         "name": "protocols.mavlink",
@@ -2398,793 +2626,255 @@
                         "name": "sim.agl.herr",
                         "title": "herr",
                         "type": "bind"
+                    },
+                    {
+                        "name": "sim.usr",
+                        "title": "USR",
+                        "type": "group"
+                    },
+                    {
+                        "name": "sim.usr.sensors",
+                        "title": "sensors",
+                        "type": "group"
+                    },
+                    {
+                        "array": 16,
+                        "name": "sim.usr.sensors.bind",
+                        "title": "bind",
+                        "type": "bind"
+                    },
+                    {
+                        "array": 16,
+                        "name": "sim.usr.sensors.mult",
+                        "title": "mult",
+                        "type": "real"
+                    },
+                    {
+                        "array": 16,
+                        "name": "sim.usr.sensors.bias",
+                        "title": "bias",
+                        "type": "real"
+                    },
+                    {
+                        "array": 16,
+                        "name": "sim.usr.sensors.data_xpl",
+                        "title": "data_xpl",
+                        "type": "text"
                     }
                 ],
-                "hash": "C2C18DB9",
-                "time": 1711458186181
+                "time": 1735028430368
             },
             "info": {
+                "busy": false,
+                "files": [
+                    "conf",
+                    "dict",
+                    "mission",
+                    "script"
+                ],
+                "format": false,
                 "hardware": "APX",
-                "name": "sim",
-                "time": 1711485969190,
-                "uid": "73696D2E4150580000000000",
-                "user": {
+                "hash": "74BAB7EE",
+                "host": {
                     "hostname": "shiva-mbp",
-                    "machineUID": "87263F0CBB338240EC36184680EA967F22A64FBF",
+                    "uid": "D0837C9643AE9A6A8FF8A9EDA1B1D4C838D312D6",
                     "username": "uavinda"
                 },
-                "version": "11.1.17"
+                "name": "sim",
+                "reconf": false,
+                "uid": "73696D2E4150580000000000",
+                "version": "11.2.5"
             },
-            "time": 1711492412724,
+            "time": 1737070870382,
             "values": {
-                "ahrs.acc.lpf": "0",
-                "ahrs.agl.aid": "0",
-                "ahrs.agl.gnd": "0.1",
-                "ahrs.agl.max": "50",
-                "ahrs.agl.min": "0.3",
-                "ahrs.agl.spd": "100",
-                "ahrs.air.airspeed": "sensor",
-                "ahrs.air.baro": "off",
-                "ahrs.air.bias": "0.01",
-                "ahrs.air.err": "10",
-                "ahrs.air.lpf": "0.01",
-                "ahrs.air.proc": "0.5",
-                "ahrs.air.slip": "sensor",
-                "ahrs.air.stab": "100",
-                "ahrs.align.pitch": "0",
-                "ahrs.align.roll": "0",
-                "ahrs.align.yaw": "0",
-                "ahrs.bearing": "vel",
-                "ahrs.gyro.dlpf": "30",
-                "ahrs.gyro.lpf": "30",
-                "ahrs.gyro.nf": "0",
-                "ahrs.gyro.nfbw": "20",
-                "ahrs.hsrc": "gps",
-                "ahrs.mag": "auto",
-                "ahrs.mode": "local",
-                "ahrs.offset.ev.x": "0",
-                "ahrs.offset.ev.y": "0",
-                "ahrs.offset.ev.z": "0",
-                "ahrs.offset.flow.x": "0",
-                "ahrs.offset.flow.y": "0",
-                "ahrs.offset.flow.z": "0",
-                "ahrs.offset.gps.x": "0",
-                "ahrs.offset.gps.y": "0",
-                "ahrs.offset.gps.z": "0",
-                "ahrs.offset.imu.x": "0",
-                "ahrs.offset.imu.y": "0",
-                "ahrs.offset.imu.z": "0",
-                "ahrs.offset.rng.x": "0",
-                "ahrs.offset.rng.y": "0",
-                "ahrs.offset.rng.z": "0",
                 "controls.mixer.bind": [
                     "ctr.att.ail",
                     "ctr.att.elv",
                     "ctr.eng.thr",
                     "ctr.att.rud",
-                    "ctr.wing.flaps",
-                    "ctr.str.brake",
-                    "ctr.wing.airbrk",
-                    "ctr.str.rud",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    ""
+                    "ctr.eng.prop"
                 ],
                 "controls.mixer.ch": [
-                    "1",
-                    "2",
-                    "3",
-                    "8",
-                    "5",
-                    "6",
-                    "7",
-                    "8",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0"
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6,
+                    7,
+                    8
                 ],
                 "controls.mixer.ch_max": [
-                    "100",
-                    "100",
-                    "100",
-                    "100",
-                    "100",
-                    "100",
-                    "100",
-                    "100",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0"
+                    100,
+                    100,
+                    100,
+                    100
                 ],
                 "controls.mixer.ch_min": [
-                    "-100",
-                    "-100",
-                    "0",
-                    "-100",
-                    "-100",
-                    "0",
-                    "0",
-                    "-100",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0"
+                    -100,
+                    -100,
+                    null,
+                    -100
                 ],
                 "controls.mixer.ch_xpl": [
                     "sim/joystick/yoke_roll_ratio",
                     "sim/joystick/yoke_pitch_ratio",
                     "sim/flightmodel/engine/ENGN_thro_use[0]",
-                    "sim/flightmodel/controls/rud_trim",
-                    "sim/flightmodel/controls/flaprqst",
-                    "sim/flightmodel/controls/parkbrake",
-                    "sim/flightmodel/controls/sbrkrqst",
-                    "sim/joystick/yoke_heading_ratio",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    ""
-                ],
-                "controls.mixer.ch_zero": [
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0"
-                ],
-                "controls.mixer.diff": [
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0"
+                    "sim/flightmodel/engine/ENGN_thro_use[1]",
+                    "sim/flightmodel/engine/POINT_pitch_deg[0]"
                 ],
                 "controls.mixer.mult": [
-                    "1",
-                    "1",
-                    "1",
-                    "1",
-                    "1",
-                    "1",
-                    "1",
-                    "1",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0"
+                    1,
+                    1,
+                    1,
+                    1,
+                    10
                 ],
-                "controls.mixer.speed": [
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0"
-                ],
-                "ident.callsign": "",
                 "ident.vcp.enable": "on",
                 "ident.vcp.id": [
-                    "23",
-                    "0",
-                    "0",
-                    "0"
+                    23
                 ],
-                "ident.vtype": "UAV",
-                "label": "S1C",
-                "protocols.jetcat.id": "0",
-                "protocols.jetcat.mode": "off",
-                "protocols.mavlink.mavev.debug": "off",
-                "protocols.mavlink.mavev.hpos": "off",
-                "protocols.mavlink.mavev.id": "0",
-                "protocols.mavlink.mavev.mode": "off",
-                "protocols.mavlink.mavev.pri": "primary",
-                "protocols.mavlink.mavev.vel": "off",
-                "protocols.mavlink.mavev.vpos": "off",
-                "protocols.mavlink.mavgps.id": "0",
-                "protocols.mavlink.mavgps.mode": "off",
-                "protocols.mavlink.mavgps.pri": "primary",
-                "protocols.mavlink.mavrc.hpos": "off",
-                "protocols.mavlink.mavrc.id": "0",
-                "protocols.mavlink.mavrc.mode": "off",
-                "protocols.mavlink.mavrc.vel": "off",
-                "protocols.mavlink.mavrc.vpos": "off",
-                "protocols.mode": "off",
-                "protocols.sbus.sbusctr.id": "0",
-                "protocols.sbus.sbusctr.interval": "7ms",
-                "protocols.sbus.sbusctr.mode": "off",
-                "protocols.sbus.sbusrc.bind": [
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    ""
-                ],
-                "protocols.sbus.sbusrc.chrc": "0",
-                "protocols.sbus.sbusrc.ext": "off",
-                "protocols.sbus.sbusrc.id": "0",
-                "protocols.sbus.sbusrc.mode": "off",
-                "protocols.srvas.ctr.FbBias": [
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0"
-                ],
-                "protocols.srvas.ctr.FbBind": [
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    ""
-                ],
-                "protocols.srvas.ctr.FbID": [
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0"
-                ],
-                "protocols.srvas.ctr.FbMult": [
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0"
-                ],
-                "protocols.srvas.ctr.MsgID": [
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0"
-                ],
-                "protocols.srvas.ctr.OutCH": [
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0"
-                ],
-                "protocols.srvas.id": "0",
-                "protocols.srvas.interface": "BUS",
-                "protocols.srvas.interval": "10ms",
-                "protocols.srvas.mode": "off",
-                "protocols.srvas.nodeID": "0",
-                "protocols.srvas.security": "0",
-                "protocols.volz.ctr.ch": [
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0"
-                ],
-                "protocols.volz.ctr.pos": [
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    ""
-                ],
-                "protocols.volz.ctr.tmp": [
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    ""
-                ],
-                "protocols.volz.id": "0",
-                "protocols.volz.mode": "off",
-                "script.code": "",
-                "script.mode": "manual",
-                "shiva.alt.Ki": "0.05",
-                "shiva.alt.Kp": "0.2",
-                "shiva.alt.gain.climb": "0",
-                "shiva.alt.gain.roll": "0",
-                "shiva.alt.gain.sink": "0",
-                "shiva.alt.slew": "2",
-                "shiva.alt.tc": "7",
-                "shiva.bearing.damp": "0.8",
-                "shiva.bearing.dist": "30",
-                "shiva.bearing.radius": "150",
-                "shiva.bearing.topt": "shortest",
-                "shiva.bearing.trig": "10",
-                "shiva.eng.Kd": "0",
-                "shiva.eng.Kff": "0",
-                "shiva.eng.Ki": "0",
-                "shiva.eng.Kp": "0",
-                "shiva.eng.glider.Kd": "0",
-                "shiva.eng.glider.Ki": "0",
-                "shiva.eng.glider.Kp": "0",
-                "shiva.eng.prop.gain": "0",
-                "shiva.eng.prop.max": "0",
-                "shiva.eng.prop.min": "0",
-                "shiva.eng.prop.slew": "0",
-                "shiva.eng.prop.start": "0",
-                "shiva.eng.rpm.cruise": "6000",
-                "shiva.eng.rpm.filter.err": "300",
-                "shiva.eng.rpm.filter.proc": "1",
-                "shiva.eng.rpm.filter.rate": "1",
-                "shiva.eng.rpm.max": "6500",
-                "shiva.eng.rpm.min": "4000",
-                "shiva.eng.rpm.slew": "0",
-                "shiva.eng.rpm.start": "0",
-                "shiva.eng.thr.fuel": "0",
-                "shiva.eng.thr.max": "100",
-                "shiva.eng.thr.min": "0",
-                "shiva.eng.thr.slew": "50",
-                "shiva.eng.thr.start": "50",
-                "shiva.flaps.approach": "20",
-                "shiva.flaps.final": "30",
-                "shiva.flaps.ld": "0.8",
-                "shiva.flaps.max": "0",
-                "shiva.flaps.min": "0",
-                "shiva.flaps.step": "0",
-                "shiva.flaps.takeoff": "45",
-                "shiva.hover.pitch.Kd": "0",
-                "shiva.hover.pitch.Kff": "0",
-                "shiva.hover.pitch.Ki": "0",
-                "shiva.hover.pitch.Kp": "0",
-                "shiva.hover.pitch.Li": "0",
-                "shiva.hover.pitch.vel": "0",
-                "shiva.hover.roll.Kd": "0",
-                "shiva.hover.roll.Kff": "0",
-                "shiva.hover.roll.Ki": "0",
-                "shiva.hover.roll.Kp": "0",
-                "shiva.hover.roll.Li": "0",
-                "shiva.hover.roll.vel": "0",
-                "shiva.hover.tc": "0",
-                "shiva.landing.agl": "0",
-                "shiva.landing.app.Kp": "0.1",
-                "shiva.landing.app.airbrk.Ki": "1",
-                "shiva.landing.app.airbrk.Kp": "0.3",
-                "shiva.landing.app.airbrk.Li": "20",
-                "shiva.landing.app.airbrk.Lo": "100",
-                "shiva.landing.app.airbrk.Lp": "100",
-                "shiva.landing.app.airbrk.bias": "0",
-                "shiva.landing.app.cap": "1",
-                "shiva.landing.app.thr": "0",
-                "shiva.landing.flare.airbrk.Kp": "4",
-                "shiva.landing.flare.airbrk.Lo": "100",
-                "shiva.landing.flare.alt": "10",
-                "shiva.landing.flare.pitch": "5",
-                "shiva.landing.flare.sink": "0.5",
-                "shiva.landing.mode": "runway",
-                "shiva.landing.run.acc": "10",
+                "ins.acc.lpf": 30,
+                "ins.agl.gnd": 0.1,
+                "ins.agl.max": 50,
+                "ins.agl.min": 0.3,
+                "ins.agl.spd": 100,
+                "ins.air.min": 6,
+                "ins.debug": "info",
+                "ins.gyro.dlpf": 30,
+                "ins.gyro.lpf": 30,
+                "ins.gyro.nfbw": 20,
+                "ins.hsrc": "gps",
+                "ins.mode": "local",
+                "label": "LR70",
+                "script.code": "VmexecTest,0000048D78DA8D534D6FDA4014BCFB578CD20B5404A3E49644515D04091201848D126E59EC67BCCDE2B576D71054E5BFF7AD81921EAAD6176B77DFCC9B791FE1D7005F11CD5E10D54E57526987CAE81F943ADC15CE55376198E9D4766BB1D5B69BEACD3D033CA6AFABBD91EBC2A195B671D5EB5D5F5EF5AE7A1D444A8A374B12B133C259A9841335EEACF8F60707C729340416862C992D6547EAA49016B95404FE57C238E8BCD11817C25086B15C196124D9EE6700CB5E1BB1F198DC10C1EADCED38FE067B5D231525A7C9A47546AE6AC7D40EA2CC426DB0D199CCF79E87EFEA32230357101C998DF599FDE161B2C0982CCBC403956484C2AC5E2999B298944A4B10ACC0DFD88215AE1A3A0F1C7A29F1510A869AF98593BAEC8024BF1B6CC9583EE3FA94EA48D881369EA4259C3760A02B8F6BB3EA3DB8A667E8DFAA70369B41960D77A12B365630255BDD49EEC08A505BCA6BD5F1141C8CE751F2385D2488264B3C47F379344996B71CEC0ACDAFB4A50395DC544A3233FB32A2747B96EF199E06F3FE2343A2EFA3F12859B2090C47C96410C7184EE788308BE6C9A8BF184773CC16F3D9341E748198BC2CF204FFAE74DEF48CAB99911352FD9E8225B7D9B24895A1105BE276A72479AA2090F2B0FE772B3D9750BA5C37A619732E6B17A31CA5761D58567C5A90DD6ED75D9775579B75A80E1C36BCF7B2C2E08B2C5355671C2CAAF76E711F04B274D80859B6DAC1CF00FC85214B5D73B3FCE009FB06A77D5B52A154334A1CCD43A304B61B7AA79437227D23D7407D78EBC2917517EDDBA0B932E46A53A2771B7C04C1E065369D27D86A99C1477DCEE937E2739A9BD3C3251EFAF1D13BEF802CB942BCB45E055E0F1A4E395FCF9827699B39DE897DA5BD4791FA79459C1A5939BC7AC021BC32FC9CB72E8E994FEA3F825F17A47931,000000DD78DA1D8D414EC3301444E7FB3B691423115155ADBAE202AC7A029FC431C412A8491AD52E122BBB6C60D1458FC5B188B3997933B318583F1000DA152D458AAD88112D66003253145BC16EFC94D3257860C160FD11C492054B59D044440513A8DC70247DFF838AD0B72A6B0EAB43510E6E389DBF0464703E80E5603F46C8DA98CE066BDCD8312963DE9D9DCCABF58E45FDC24FD03FBF2941A3B9A6C5D52374CA559372B157159AEF4C4AAD699E2AF5F066FBDE75CFCBCD3FF30F33C0",
+                "shiva.alt.Ki": 0.4,
+                "shiva.alt.Kp": 2,
+                "shiva.alt.gain.climb": 0.5,
+                "shiva.alt.gain.sink": 0.4,
+                "shiva.alt.slew": 4,
+                "shiva.alt.tc": 2,
+                "shiva.bearing.damp": 0.9,
+                "shiva.bearing.dist": 20,
+                "shiva.bearing.radius": 50,
+                "shiva.bearing.trig": 10,
+                "shiva.eng.Kd": 2,
+                "shiva.eng.Ki": 2,
+                "shiva.eng.Kp": 6,
+                "shiva.eng.glider.Kd": 0.5,
+                "shiva.eng.glider.Ki": 1,
+                "shiva.eng.glider.Kp": 2,
+                "shiva.eng.prop.max": 100,
+                "shiva.eng.prop.min": -100,
+                "shiva.eng.prop.slew": 20,
+                "shiva.eng.prop.start": -30,
+                "shiva.eng.rpm.cruise": 8000,
+                "shiva.eng.rpm.filter.err": 400,
+                "shiva.eng.rpm.filter.proc": 0.5,
+                "shiva.eng.rpm.filter.rate": 0.1,
+                "shiva.eng.rpm.max": 8300,
+                "shiva.eng.rpm.min": 7800,
+                "shiva.eng.rpm.slew": 100,
+                "shiva.eng.rpm.start": 500,
+                "shiva.eng.thr.max": 100,
+                "shiva.eng.thr.start": 10,
+                "shiva.hover.pitch.Ki": 2,
+                "shiva.hover.pitch.Kp": 7,
+                "shiva.hover.pitch.Li": 8,
+                "shiva.hover.roll.Ki": 1.5,
+                "shiva.hover.roll.Kp": 3,
+                "shiva.hover.roll.Li": 8,
+                "shiva.hover.tc": 5,
+                "shiva.landing.agl": 15,
+                "shiva.landing.flare.alt": 7,
+                "shiva.landing.flare.sink": 0.3,
+                "shiva.landing.mode": "helipad",
                 "shiva.landing.run.alt": "on",
-                "shiva.landing.run.brakes": "50",
-                "shiva.landing.run.speed": "35",
-                "shiva.landing.run.thr": "override",
-                "shiva.landing.runcheck": "off",
-                "shiva.landing.touch.VS1G": "0",
-                "shiva.landing.touch.alt": "2",
-                "shiva.landing.touch.pitch": "1",
+                "shiva.landing.run.thr": "ignore",
                 "shiva.mode": "local",
-                "shiva.pitch.Kd": "0",
-                "shiva.pitch.Kff": "2",
-                "shiva.pitch.Ki": "3.5",
-                "shiva.pitch.Kp": "10",
-                "shiva.pitch.Li": "25",
-                "shiva.pitch.Lo": "100",
-                "shiva.pitch.Lp": "40",
-                "shiva.pitch.cmd.diff": "-0.5",
-                "shiva.pitch.cmd.max": "30",
-                "shiva.pitch.cmd.offset": "0",
-                "shiva.pitch.cmd.slew": "15",
-                "shiva.pitch.gain.flaps": "0",
-                "shiva.pitch.gain.high": "0",
-                "shiva.pitch.gain.low": "0",
-                "shiva.pitch.ifactor": "0",
-                "shiva.pitch.rdiff": "0",
-                "shiva.pitch.tc": "0.5",
-                "shiva.pitch.trim.flaps": "0",
-                "shiva.pitch.trim.high": "0",
-                "shiva.pitch.trim.low": "0",
-                "shiva.pitch.trim.stab": "0",
-                "shiva.roll.Kd": "0",
-                "shiva.roll.Kff": "0",
-                "shiva.roll.Ki": "2.5",
-                "shiva.roll.Kp": "10",
-                "shiva.roll.Li": "10",
-                "shiva.roll.Lo": "100",
-                "shiva.roll.Lp": "40",
-                "shiva.roll.cmd.diff": "0",
-                "shiva.roll.cmd.max": "40",
-                "shiva.roll.cmd.offset": "0",
-                "shiva.roll.cmd.slew": "25",
-                "shiva.roll.gain.flaps": "0",
-                "shiva.roll.gain.high": "0",
-                "shiva.roll.gain.low": "0",
-                "shiva.roll.gain.stab": "0",
-                "shiva.roll.ifactor": "0",
-                "shiva.roll.rdiff": "0",
-                "shiva.roll.tc": "0.5",
-                "shiva.roll.trim.flaps": "0",
-                "shiva.roll.trim.high": "0",
-                "shiva.roll.trim.low": "0",
-                "shiva.safety.loiter.circles": "0",
-                "shiva.safety.loiter.time": "0",
-                "shiva.safety.timeout": "0",
-                "shiva.spd.Ki": "0.3",
-                "shiva.spd.Kp": "0.7",
-                "shiva.spd.Li": "20",
-                "shiva.spd.slew": "2",
-                "shiva.spd.tc": "5",
-                "shiva.spd.weight": "1",
-                "shiva.takeoff.check.hdg": "20",
-                "shiva.takeoff.check.pwr": "off",
-                "shiva.takeoff.check.xtrack": "10",
-                "shiva.takeoff.climb.altitude": "60",
-                "shiva.takeoff.climb.pitch": "8",
-                "shiva.takeoff.climb.thr": "100",
-                "shiva.takeoff.launcher.acc": "0",
-                "shiva.takeoff.launcher.cdelay": "0",
-                "shiva.takeoff.launcher.tdelay": "0",
-                "shiva.takeoff.mode": "runway",
-                "shiva.takeoff.run.pitch": "0",
-                "shiva.takeoff.run.prop": "0",
-                "shiva.takeoff.run.speed": "32",
-                "shiva.taxi.brakes.Kd": "0",
-                "shiva.taxi.brakes.Kp": "10",
-                "shiva.taxi.str.Kff": "10",
-                "shiva.taxi.str.Ki": "0.2",
-                "shiva.taxi.str.Kp": "10",
-                "shiva.taxi.str.Li": "50",
-                "shiva.taxi.str.Lp": "15",
-                "shiva.taxi.str.gain": "1",
-                "shiva.taxi.str.tc": "5",
-                "shiva.taxi.track.damp": "0.9",
-                "shiva.taxi.track.dist": "7",
-                "shiva.taxi.track.trig": "6",
-                "shiva.yaw.Kd": "0",
-                "shiva.yaw.Kff": "0.5",
-                "shiva.yaw.Ki": "1.1",
-                "shiva.yaw.Kp": "4",
-                "shiva.yaw.Li": "5",
-                "shiva.yaw.Lo": "100",
-                "shiva.yaw.Lp": "20",
-                "shiva.yaw.gain.flaps": "0",
-                "shiva.yaw.gain.high": "0",
-                "shiva.yaw.gain.low": "0",
-                "shiva.yaw.gain.slip": "1",
-                "shiva.yaw.gain.turn": "1",
-                "shiva.yaw.ifactor": "0",
-                "shiva.yaw.rdiff": "0",
-                "shiva.yaw.slew": "0",
-                "shiva.yaw.tc": "2.5",
-                "shiva.yaw.trim.flaps": "0",
-                "shiva.yaw.trim.high": "0",
-                "shiva.yaw.trim.low": "0",
-                "sim.agl.err": "1",
-                "sim.agl.herr": "",
+                "shiva.perf.VC": 20,
+                "shiva.perf.VNE": 45,
+                "shiva.perf.VSI": 10,
+                "shiva.perf.VSO": 3,
+                "shiva.perf.altitude": 20,
+                "shiva.perf.climb": 4,
+                "shiva.perf.ld": 1,
+                "shiva.perf.mtow": 25,
+                "shiva.perf.radius": 100,
+                "shiva.perf.sink": 3,
+                "shiva.perf.type": "VTOL",
+                "shiva.pitch.Ki": 1.5,
+                "shiva.pitch.Kp": 5,
+                "shiva.pitch.Li": 90,
+                "shiva.pitch.Lo": 100,
+                "shiva.pitch.Lp": 200,
+                "shiva.pitch.cmd.max": 15,
+                "shiva.pitch.cmd.slew": 30,
+                "shiva.pitch.tc": 0.3,
+                "shiva.roll.Ki": 0.5,
+                "shiva.roll.Kp": 3,
+                "shiva.roll.Li": 60,
+                "shiva.roll.Lo": 100,
+                "shiva.roll.Lp": 80,
+                "shiva.roll.cmd.max": 35,
+                "shiva.roll.cmd.slew": 40,
+                "shiva.roll.tc": 0.3,
+                "shiva.spd.Ki": 0.2,
+                "shiva.spd.Kp": 1.2,
+                "shiva.spd.Li": 10,
+                "shiva.spd.est.bias": 0.01,
+                "shiva.spd.est.err": 20,
+                "shiva.spd.est.lpf": 0.01,
+                "shiva.spd.est.proc": 0.001,
+                "shiva.spd.est.type": "vel",
+                "shiva.spd.slew": 2,
+                "shiva.spd.tc": 2,
+                "shiva.spd.weight": 1,
+                "shiva.takeoff.climb.altitude": 3,
+                "shiva.takeoff.mode": "helipad",
+                "shiva.yaw.Kd": 0.8,
+                "shiva.yaw.Ki": 0.5,
+                "shiva.yaw.Kp": 5,
+                "shiva.yaw.Li": 80,
+                "shiva.yaw.Lo": 100,
+                "shiva.yaw.Lp": 50,
+                "shiva.yaw.gain.high": 0.1,
+                "shiva.yaw.slew": 100,
+                "shiva.yaw.slip.gain": 1,
+                "shiva.yaw.slip.turn": 1,
+                "shiva.yaw.tc": 3,
+                "sim.agl.err": 1,
                 "sim.agl.pwr": "auto",
-                "sim.baro.bias": "0",
-                "sim.baro.mult": "0",
-                "sim.baro.noise": "0",
-                "sim.gps.herr": "",
-                "sim.gps.vel": "0",
-                "sim.imu.bias.acc.Ax": "0",
-                "sim.imu.bias.acc.Ay": "0",
-                "sim.imu.bias.acc.Az": "0",
-                "sim.imu.bias.gyro.pitch": "0",
-                "sim.imu.bias.gyro.roll": "0",
-                "sim.imu.bias.gyro.yaw": "0",
-                "sim.imu.bias.mag.Hx": "0",
-                "sim.imu.bias.mag.Hy": "0",
-                "sim.imu.bias.mag.Hz": "0",
-                "sim.imu.noise.acc": "0",
-                "sim.imu.noise.gyro": "0",
-                "sim.imu.noise.mag": "0",
-                "sim.pitot.bias": "0",
-                "sim.pitot.keas": "0",
-                "sim.pitot.noise": "0",
-                "telemetry.broadcast": "off",
-                "telemetry.data.ats": "off",
+                "sim.baro.noise": 0.01,
+                "sim.gps.vel": 0.01,
+                "sim.imu.noise.acc": 0.1,
+                "sim.imu.noise.gyro": 0.01,
+                "sim.imu.noise.mag": 0.01,
+                "sim.pitot.noise": 0.01,
                 "telemetry.data.aux": [
-                    "sns.vps.x",
-                    "sns.vps.y",
-                    "sns.vps.z",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    ""
+                    "sns.eng.rpm",
+                    "est.eng.drpm",
+                    "est.wpt.thdg",
+                    "est.usr.u1",
+                    "sns.vps.vx",
+                    "est.lpos.vx",
+                    "est.lpos.vy",
+                    "est.acc.y",
+                    "est.lpos.ay",
+                    "sns.air.slip"
                 ],
-                "telemetry.data.cam": "off",
-                "telemetry.data.haps": "off",
-                "telemetry.data.mode": "default",
                 "telemetry.data.srcs": "on",
-                "telemetry.data.sync": "off",
-                "telemetry.data.turret": "off",
                 "telemetry.data.usr": "on",
-                "telemetry.mode": "always",
-                "telemetry.rate": "10Hz",
-                "vehicle.acc": "7",
-                "vehicle.altitude": "200",
-                "vehicle.climb": "6",
-                "vehicle.endurance": "0",
-                "vehicle.fuel": "0",
-                "vehicle.init.bind": [
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    ""
-                ],
-                "vehicle.init.value": [
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0",
-                    "0"
-                ],
-                "vehicle.ld": "17",
-                "vehicle.mtow": "1600",
-                "vehicle.radius": "700",
-                "vehicle.sink": "4",
-                "vehicle.speed.GS": "5",
-                "vehicle.speed.VC": "40",
-                "vehicle.speed.VFE": "45",
-                "vehicle.speed.VNE": "60",
-                "vehicle.speed.VNO": "46",
-                "vehicle.speed.VSI": "36",
-                "vehicle.speed.VSO": "32",
-                "vehicle.speed.VY": "42",
-                "vehicle.type": "CTOL"
+                "telemetry.mode": "auto"
             }
         }
     ],
-    "time": 1711492412724,
-    "title": "S1C",
-    "vehicle": {
-        "callsign": "SIM",
-        "class": "UAV",
-        "time": 1711492412504,
+    "time": 1737070870382,
+    "title": "LR70",
+    "unit": {
+        "name": "SIM",
+        "time": 1737070870095,
+        "type": "UAV",
         "uid": "73696D2E415058000053494D"
     }
 }
