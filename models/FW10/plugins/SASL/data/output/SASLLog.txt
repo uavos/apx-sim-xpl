@@ -1,0 +1,29 @@
+[FWING INFO]: Initializing...
+[FWING INFO]: [DISPLAY] Main Screen Bounds: 0, 0, 1920, 1001
+[FWING INFO]: Path to module: C:\X-Plane11/Aircraft/FWING_PARACHUTE_CATAPULT/plugins/SASL/data/modules/main.lua
+[FWING INFO]: Loading module...
+[FWING INFO]: [LUA]: loading	module
+[FWING INFO]: [LUA]: loading	fltcontrols
+[FWING INFO]: [LUA]: loading	data_aero
+[FWING INFO]: [LUA]: loading	popupCloseButton
+[FWING INFO]: [LUA]: loading	rectangle
+[FWING INFO]: [LUA]: loading	mouseFocusedZone
+[FWING INFO]: [LUA]: loading	interactive
+[FWING INFO]: [LUA]: loading	show_panels
+[FWING INFO]: Scripts loading time: 0.0095
+[FWING INFO]: Module loaded
+[FWING WARN]: Enable/disable aircraft 3D panel usage explicitly (sasl.options.setAircraftPanelRendering)
+[FWING WARN]: Enable/disable 3D rendering explicitly (sasl.options.set3DRendering)
+[FWING WARN]: Enable/disable interactivity option explicitly (sasl.options.setInteractivity)
+[FWING INFO]: Initializing modules...
+[FWING INFO]: Modules initialization done
+[FWING INFO]: Disabling...
+[FWING WARN]: [LUA]: Legacy subpanel requsted saving its state, but 'name' wasn't provided at subpanel creation
+[FWING WARN]: [STACK]:| ..._CATAPULT/plugins/SASL/data/init/initSubpanelCreator.lua:190 in function <savePopupsState>
+[FWING WARN]: [STACK]:| ...G_PARACHUTE_CATAPULT/plugins/SASL/data/init/initMain.lua:369 in function <saveState>
+[FWING WARN]: [STACK]:| ...CHUTE_CATAPULT/plugins/SASL/data/init/initProcessing.lua:283 in function <?>
+[FWING WARN]: [LUA]: Legacy subpanel requsted saving its state, but 'name' wasn't provided at subpanel creation
+[FWING WARN]: [STACK]:| ..._CATAPULT/plugins/SASL/data/init/initSubpanelCreator.lua:190 in function <savePopupsState>
+[FWING WARN]: [STACK]:| ...G_PARACHUTE_CATAPULT/plugins/SASL/data/init/initMain.lua:369 in function <saveState>
+[FWING WARN]: [STACK]:| ...CHUTE_CATAPULT/plugins/SASL/data/init/initProcessing.lua:283 in function <?>
+[FWING INFO]: SASL plugin stopped...
