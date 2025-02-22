@@ -9,7 +9,7 @@ createGlobalPropertyf("uavos/stab_r",0)
 createGlobalPropertyf("uavos/flap_l", 0)
 createGlobalPropertyf("uavos/flap_r", 0)
 createGlobalPropertyi("uavos/launch", 0)
-createGlobalPropertyi("uavos/parachute", 0)
+--createGlobalPropertyi("uavos/parachute", 0)
 createGlobalPropertyi("uavos/on_catapult", 0)
 
 components = {

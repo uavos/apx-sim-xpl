@@ -73,12 +73,13 @@ defineProperty("ail_l_in", globalPropertyf("uavos/ail_l"))
 defineProperty("ail_r_in", globalPropertyf("uavos/ail_r"))
 defineProperty("stab_l_in", globalPropertyf("uavos/stab_l"))
 defineProperty("stab_r_in", globalPropertyf("uavos/stab_r"))
-defineProperty("chute_in", globalPropertyi("uavos/parachute"))
+--defineProperty("chute_in", globalPropertyi("uavos/parachute"))
 defineProperty("launch_in", globalPropertyi("uavos/launch"))
 defineProperty("on_catapult", globalPropertyi("uavos/on_catapult"))
 
 defineProperty("chute", globalPropertyi("sim/cockpit/switches/parachute_on"))
 defineProperty("eng_rpm", globalPropertyfa("sim/cockpit2/engine/indicators/engine_speed_rpm"))
+defineProperty("eng_tr", globalPropertyfa("sim/flightmodel/engine/POINT_thrust"))
 
 function onPlaneLoaded()
 	plane_loaded = 1
@@ -88,10 +89,10 @@ function onAirportLoaded()
 	port_loaded = 1
 end
 
-set(chute_in, 0)
-set(overr_path, 0, 1)
-set(overr_controls, 0)
-set(overr_surfaces, 0)
+--set(chute_in, 0)
+--set(overr_path, 0, 1)
+--set(overr_controls, 0)
+--set(overr_surfaces, 0)
 
 plane_loaded = 0
 port_loaded = 0
@@ -117,6 +118,8 @@ lx = get(local_x)
 ly = get(local_y)
 lz = get(local_z)
 
+
+test = 0
 function update()
 
 
@@ -129,7 +132,7 @@ function update()
 		lz = get(local_z)
 		plane_loaded = 0
 		key_overr = 1
-		set(chute_in, 0)
+		--set(chute_in, 0)
 	end
 
 	res,locX,locY,locZ,norX,norY,norZ,velX,velY,velZ,Wet = sasl.probeTerrain ( lx, 0 , lz)
@@ -155,29 +158,41 @@ function update()
 		set(V_yaw, 0)]]
 		dx = x - get(local_x)
 		dz = z - get(local_z)
-		k_force = 20
+		k_force = 1000
 		k_force2 = 20
-		set(F_long, math.cos(math.rad(get(sim_heading))) * dz * k_force + math.sin(math.rad(get(sim_heading))) * -dx * k_force)
+		if get(sim_alt_agl) < 1 and get(sim_gs) < 1 then
+			set(F_long, math.cos(math.rad(get(sim_heading))) * dz * k_force + math.sin(math.rad(get(sim_heading))) * -dx * k_force)
+			test = 1
+		end
 		--set(F_side, math.sin(math.rad(get(sim_heading))) * -dz * k_force2 + math.cos(math.rad(get(sim_heading))) * dx * k_force2)
 		l_heading = get(sim_heading)
 		timer2 = timer2 + 2 * get(sim_frp)
 	end
 
-	if key == 1 and (launch == 1 or get(eng_rpm, 1) > 1000) then
+	if key == 1 and launch == 1  then
 		key2 = 0
-		set(overr_path, 0, 1)	
-		set(vel_z, -20 * math.cos(math.rad(get(sim_heading))))
-		set(vel_x, 20 * math.sin(math.rad(get(sim_heading))))
-		set(vel_y, 5.5)
-		set(V_pitch, 0)
-		set(V_roll, 0)
-		set(V_yaw, 0)
-		timer = timer + 5 * get(sim_frp)
+		--set(overr_path, 0, 1)
+		--set(vel_z, -20 * math.cos(math.rad(get(sim_heading))))
+		--set(vel_x, 20 * math.sin(math.rad(get(sim_heading))))
+		--set(vel_y, 5.5)
+		--set(V_pitch, 0)
+		--set(V_roll, 0)
+		--set(V_yaw, 0)
+		set(F_long, -400)
+		test = 2
+		set(F_vert, 50)
+		timer = timer + 2 * get(sim_frp)
 	end
+
+	--print(test)
+	--print(timer)
 
 	if timer > 1 then 
 		key = 0
 		timer = 0
+		test = 0
+		launch = 0
+		set(launch_in, 0)
 	end
 	
 	if timer2 > 2 then 
@@ -189,16 +204,18 @@ function update()
 		port_loaded = 0
 		key2 = 1
 		key = 0
+		test = 0
 	end
 	
-	if get(sim_alt_agl) > 1 or get(eng_rpm, 1) > 1000 then set(sim_landgear, 0) end
+	if get(sim_alt_agl) > 1  then set(sim_landgear, 0) end
 	if get(sim_ias) < 5 and get(sim_gs) < 1 then
 		key = 1
 	end
 	
 	if get(crash) == 1 then
-		key_overr = 1
+		--key_overr = 1
 		key = 0
+		test = 0
 		launch = 0
 		set(sim_landgear, 1)
 	end
@@ -212,37 +229,14 @@ function update()
 	set(flap_r, get(flap_r_in))
 	set(stab_l, get(stab_l_in))
 	set(stab_r, get(stab_r_in))
-	set(chute, get(chute_in))
+
 	set(on_catapult, key2)
 
 
 	if get(launch_in) > 0 then
 		launch = 1
-	else
-		launch = 0
+
 	end
-
-	set(launch_in, 0)
-
-
-
-	sim_f_side = get(sim_F_side)
-	sim_f_vert = get(sim_F_vert)
-	sim_f_long = get(sim_F_long)
-	sim_m_pitch = get(sim_M_pitch)
-	sim_m_roll = get(sim_M_roll)
-	sim_m_yaw = get(sim_M_yaw)
-
-	m_pitch = get(V_pitch) * - 5
-	m_roll = get(V_roll) * - 5
-	m_yaw = get(V_yaw) * - 5
-
-	--set(F_side, sim_f_side * -1)
-	--set(F_vert, sim_f_vert * -1)
-	--set(F_long, sim_f_long * -1)
-	--set(M_pitch, m_pitch)
-	--set(M_roll, m_roll)
-	--set(M_yaw, m_yaw)
 
 
 
