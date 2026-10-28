@@ -3096,7 +3096,7 @@
                 "uid": "73696D2E4150580000000000",
                 "version": "11.2.24"
             },
-            "time": 1793189755500,
+            "time": 1793207020399,
             "values": {
                 "controls.mixer.bind": [
                     "ctr.att.ail",
@@ -3201,15 +3201,16 @@
                 "shiva.landing.app.Kp": 0.1,
                 "shiva.landing.app.cap": 1,
                 "shiva.landing.flare.alt": 10,
-                "shiva.landing.flare.pitch": 5,
+                "shiva.landing.flare.pitch": 2,
                 "shiva.landing.flare.sink": 0.5,
                 "shiva.landing.run.acc": 10,
                 "shiva.landing.run.alt": "on",
                 "shiva.landing.run.brakes": 50,
                 "shiva.landing.run.speed": 35,
                 "shiva.landing.run.thr": "override",
+                "shiva.landing.touch.VS1G": 33,
                 "shiva.landing.touch.alt": 2,
-                "shiva.landing.touch.pitch": 1,
+                "shiva.landing.touch.pitch": 5,
                 "shiva.mode": "local",
                 "shiva.perf.GS": 2,
                 "shiva.perf.VC": 40,
@@ -3294,11 +3295,11 @@
             }
         }
     ],
-    "time": 1793189755500,
+    "time": 1793207020399,
     "title": "S1C",
     "unit": {
         "name": "SIM",
-        "time": 1793189755082,
+        "time": 1793207020337,
         "type": "UAV",
         "uid": "73696D2E415058000053494D"
     }

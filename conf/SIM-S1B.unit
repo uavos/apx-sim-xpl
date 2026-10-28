@@ -3096,7 +3096,7 @@
                 "uid": "73696D2E4150580000000000",
                 "version": "11.2.24"
             },
-            "time": 1793192213030,
+            "time": 1793205902444,
             "values": {
                 "controls.mixer.bind": [
                     "ctr.att.ail",
@@ -3198,7 +3198,7 @@
                 "shiva.landing.app.Kp": 0.1,
                 "shiva.landing.app.cap": 1,
                 "shiva.landing.app.thr": 5,
-                "shiva.landing.flare.alt": 15,
+                "shiva.landing.flare.alt": 20,
                 "shiva.landing.flare.pitch": 3,
                 "shiva.landing.flare.sink": 1,
                 "shiva.landing.run.acc": 5,
@@ -3206,21 +3206,20 @@
                 "shiva.landing.run.brakes": 50,
                 "shiva.landing.run.speed": 15,
                 "shiva.landing.run.thr": "ignore",
-                "shiva.landing.touch.alt": 3,
+                "shiva.landing.touch.VS1G": 28,
+                "shiva.landing.touch.alt": 5,
                 "shiva.landing.touch.pitch": 6,
                 "shiva.mode": "local",
                 "shiva.perf.GS": 2,
-                "shiva.perf.VC": 40,
-                "shiva.perf.VFE": 45,
-                "shiva.perf.VNE": 60,
-                "shiva.perf.VNO": 46,
-                "shiva.perf.VSI": 36,
-                "shiva.perf.VSO": 32,
-                "shiva.perf.VY": 42,
+                "shiva.perf.VC": 25,
+                "shiva.perf.VNE": 45,
+                "shiva.perf.VNO": 30,
+                "shiva.perf.VSO": 20,
+                "shiva.perf.VY": 25,
                 "shiva.perf.acc": 7,
                 "shiva.perf.altitude": 200,
                 "shiva.perf.climb": 6,
-                "shiva.perf.ld": 17,
+                "shiva.perf.ld": 12,
                 "shiva.perf.mtow": 120,
                 "shiva.perf.radius": 700,
                 "shiva.perf.sink": 4,
@@ -3289,11 +3288,11 @@
             }
         }
     ],
-    "time": 1793192213030,
+    "time": 1793205902444,
     "title": "S1B",
     "unit": {
         "name": "SIM",
-        "time": 1793192212910,
+        "time": 1793205901831,
         "type": "UAV",
         "uid": "73696D2E415058000053494D"
     }
