@@ -2,7 +2,7 @@
     "nodes": [
         {
             "dict": {
-                "cache": "266EC66D",
+                "cache": "6F7DDE4D",
                 "fields": [
                     {
                         "name": "label",
@@ -61,6 +61,11 @@
                         "name": "ident.vcp.id",
                         "title": "id",
                         "type": "byte"
+                    },
+                    {
+                        "name": "ident.id",
+                        "title": "id",
+                        "type": "string"
                     },
                     {
                         "name": "telemetry",
@@ -139,6 +144,12 @@
                         "units": "off,on"
                     },
                     {
+                        "name": "telemetry.data.scr",
+                        "title": "scr",
+                        "type": "option",
+                        "units": "off,on"
+                    },
+                    {
                         "name": "telemetry.data.srcs",
                         "title": "srcs",
                         "type": "option",
@@ -163,6 +174,18 @@
                         "units": "off,on"
                     },
                     {
+                        "name": "telemetry.data.geo",
+                        "title": "geo",
+                        "type": "option",
+                        "units": "off,on"
+                    },
+                    {
+                        "name": "telemetry.data.swarm",
+                        "title": "swarm",
+                        "type": "option",
+                        "units": "off,on"
+                    },
+                    {
                         "array": 24,
                         "name": "telemetry.data.aux",
                         "title": "aux",
@@ -181,6 +204,11 @@
                     {
                         "name": "ins.remag",
                         "title": "Reset magnetometer",
+                        "type": "command"
+                    },
+                    {
+                        "name": "ins.rebaro",
+                        "title": "Reset barometer",
                         "type": "command"
                     },
                     {
@@ -384,6 +412,98 @@
                         "units": "Hz"
                     },
                     {
+                        "name": "ins.acc.grav",
+                        "title": "grav",
+                        "type": "option",
+                        "units": "auto,off"
+                    },
+                    {
+                        "name": "ins.mag",
+                        "title": "mag",
+                        "type": "group"
+                    },
+                    {
+                        "name": "ins.mag.est",
+                        "title": "est",
+                        "type": "option",
+                        "units": "auto,heading,init,disable"
+                    },
+                    {
+                        "name": "ins.mag.decl",
+                        "title": "decl",
+                        "type": "option",
+                        "units": "auto,constant,mandala,disabled"
+                    },
+                    {
+                        "name": "ins.mag.dv",
+                        "title": "dv",
+                        "type": "real",
+                        "units": "deg"
+                    },
+                    {
+                        "name": "ins.pos",
+                        "title": "pos",
+                        "type": "group"
+                    },
+                    {
+                        "name": "ins.pos.hsrc",
+                        "title": "hsrc",
+                        "type": "option",
+                        "units": "baro,gps,range,vision"
+                    },
+                    {
+                        "name": "ins.pos.gnss",
+                        "title": "gnss",
+                        "type": "option",
+                        "units": "auto,manual,always,disabled"
+                    },
+                    {
+                        "name": "ins.pos.gate",
+                        "title": "gate",
+                        "type": "byte"
+                    },
+                    {
+                        "name": "ins.pos.sacc",
+                        "title": "sacc",
+                        "type": "byte",
+                        "units": "m/s"
+                    },
+                    {
+                        "name": "ins.pos.dist",
+                        "title": "dist",
+                        "type": "word",
+                        "units": "m"
+                    },
+                    {
+                        "name": "ins.pos.bearing",
+                        "title": "bearing",
+                        "type": "byte",
+                        "units": "deg"
+                    },
+                    {
+                        "name": "ins.air",
+                        "title": "air",
+                        "type": "group"
+                    },
+                    {
+                        "name": "ins.air.baro",
+                        "title": "baro",
+                        "type": "option",
+                        "units": "sensor,off"
+                    },
+                    {
+                        "name": "ins.air.pitot",
+                        "title": "pitot",
+                        "type": "option",
+                        "units": "sensor,mandala,raw,blocked"
+                    },
+                    {
+                        "name": "ins.air.min",
+                        "title": "min",
+                        "type": "byte",
+                        "units": "m/s"
+                    },
+                    {
                         "name": "ins.agl",
                         "title": "agl",
                         "type": "group"
@@ -417,58 +537,6 @@
                         "title": "aid",
                         "type": "word",
                         "units": "m"
-                    },
-                    {
-                        "name": "ins.air",
-                        "title": "air",
-                        "type": "group"
-                    },
-                    {
-                        "name": "ins.air.baro",
-                        "title": "baro",
-                        "type": "option",
-                        "units": "sensor,off"
-                    },
-                    {
-                        "name": "ins.air.pitot",
-                        "title": "pitot",
-                        "type": "option",
-                        "units": "sensor,mandala,raw,blocked"
-                    },
-                    {
-                        "name": "ins.air.min",
-                        "title": "min",
-                        "type": "byte",
-                        "units": "m/s"
-                    },
-                    {
-                        "name": "ins.mag",
-                        "title": "mag",
-                        "type": "group"
-                    },
-                    {
-                        "name": "ins.mag.est",
-                        "title": "est",
-                        "type": "option",
-                        "units": "auto,heading,init,disable"
-                    },
-                    {
-                        "name": "ins.mag.decl",
-                        "title": "decl",
-                        "type": "option",
-                        "units": "auto,constant,mandala,disabled"
-                    },
-                    {
-                        "name": "ins.mag.dv",
-                        "title": "dv",
-                        "type": "real",
-                        "units": "deg"
-                    },
-                    {
-                        "name": "ins.hsrc",
-                        "title": "hsrc",
-                        "type": "option",
-                        "units": "baro,gps,range,vision"
                     },
                     {
                         "name": "ins.tune",
@@ -807,6 +875,12 @@
                         "units": "deg/s"
                     },
                     {
+                        "name": "shiva.roll.ktas",
+                        "title": "ktas",
+                        "type": "option",
+                        "units": "off,on"
+                    },
+                    {
                         "name": "shiva.roll.trim",
                         "title": "trim",
                         "type": "group"
@@ -941,6 +1015,12 @@
                         "title": "ifactor",
                         "type": "word",
                         "units": "deg/s"
+                    },
+                    {
+                        "name": "shiva.pitch.ktas",
+                        "title": "ktas",
+                        "type": "option",
+                        "units": "off,on"
                     },
                     {
                         "name": "shiva.pitch.trim",
@@ -1078,6 +1158,12 @@
                         "title": "ifactor",
                         "type": "word",
                         "units": "deg/s"
+                    },
+                    {
+                        "name": "shiva.yaw.ktas",
+                        "title": "ktas",
+                        "type": "option",
+                        "units": "off,on"
                     },
                     {
                         "name": "shiva.yaw.trim",
@@ -1228,6 +1314,11 @@
                         "type": "real"
                     },
                     {
+                        "name": "shiva.spd.wgain",
+                        "title": "wgain",
+                        "type": "real"
+                    },
+                    {
                         "name": "shiva.spd.slew",
                         "title": "slew",
                         "type": "real",
@@ -1311,6 +1402,83 @@
                         "title": "slew",
                         "type": "real",
                         "units": "m/s^2"
+                    },
+                    {
+                        "name": "shiva.swarm",
+                        "title": "Swarm",
+                        "type": "group"
+                    },
+                    {
+                        "name": "shiva.swarm.mode",
+                        "title": "mode",
+                        "type": "option",
+                        "units": "off,master,slave"
+                    },
+                    {
+                        "name": "shiva.swarm.id",
+                        "title": "id",
+                        "type": "word"
+                    },
+                    {
+                        "name": "shiva.swarm.offset",
+                        "title": "Offset",
+                        "type": "group"
+                    },
+                    {
+                        "name": "shiva.swarm.offset.dx",
+                        "title": "dx",
+                        "type": "real",
+                        "units": "m"
+                    },
+                    {
+                        "name": "shiva.swarm.offset.dy",
+                        "title": "dy",
+                        "type": "real",
+                        "units": "m"
+                    },
+                    {
+                        "name": "shiva.swarm.offset.dz",
+                        "title": "dz",
+                        "type": "real",
+                        "units": "m"
+                    },
+                    {
+                        "name": "shiva.swarm.bearing",
+                        "title": "Bearing",
+                        "type": "group"
+                    },
+                    {
+                        "name": "shiva.swarm.bearing.tc",
+                        "title": "tc",
+                        "type": "real",
+                        "units": "s"
+                    },
+                    {
+                        "name": "shiva.swarm.bearing.kp",
+                        "title": "kp",
+                        "type": "real"
+                    },
+                    {
+                        "name": "shiva.swarm.bearing.limit",
+                        "title": "limit",
+                        "type": "real",
+                        "units": "deg"
+                    },
+                    {
+                        "name": "shiva.swarm.speed",
+                        "title": "Speed",
+                        "type": "group"
+                    },
+                    {
+                        "name": "shiva.swarm.speed.kp",
+                        "title": "kp",
+                        "type": "real"
+                    },
+                    {
+                        "name": "shiva.swarm.speed.lp",
+                        "title": "lp",
+                        "type": "real",
+                        "units": "m/s"
                     },
                     {
                         "name": "shiva.eng",
@@ -1795,6 +1963,57 @@
                         "type": "word"
                     },
                     {
+                        "name": "shiva.safety.geo",
+                        "title": "geo",
+                        "type": "option",
+                        "units": "off,report,avoid"
+                    },
+                    {
+                        "name": "shiva.guide",
+                        "title": "Guide",
+                        "type": "group"
+                    },
+                    {
+                        "name": "shiva.guide.mode",
+                        "title": "mode",
+                        "type": "option",
+                        "units": "off,on"
+                    },
+                    {
+                        "name": "shiva.guide.altitude",
+                        "title": "altitude",
+                        "type": "word",
+                        "units": "m"
+                    },
+                    {
+                        "name": "shiva.guide.slope",
+                        "title": "slope",
+                        "type": "byte",
+                        "units": "deg"
+                    },
+                    {
+                        "name": "shiva.guide.sgain",
+                        "title": "sgain",
+                        "type": "real"
+                    },
+                    {
+                        "name": "shiva.guide.thr",
+                        "title": "thr",
+                        "type": "byte",
+                        "units": "%"
+                    },
+                    {
+                        "name": "shiva.guide.acc",
+                        "title": "acc",
+                        "type": "byte",
+                        "units": "m/s^2"
+                    },
+                    {
+                        "name": "shiva.guide.vcp",
+                        "title": "vcp",
+                        "type": "byte"
+                    },
+                    {
                         "name": "shiva.takeoff",
                         "title": "Takeoff",
                         "type": "group"
@@ -2153,77 +2372,175 @@
                         "type": "byte"
                     },
                     {
-                        "name": "protocols.srvas",
-                        "title": "SRVAS",
+                        "name": "protocols.swiwin",
+                        "title": "SWIWIN",
                         "type": "group"
                     },
                     {
-                        "name": "protocols.srvas.mode",
+                        "name": "protocols.swiwin.mode",
                         "title": "mode",
                         "type": "option",
                         "units": "off,NODE,LAN"
                     },
                     {
-                        "name": "protocols.srvas.id",
+                        "name": "protocols.swiwin.id",
                         "title": "id",
                         "type": "byte"
                     },
                     {
-                        "name": "protocols.srvas.nodeID",
+                        "name": "protocols.swiwin.tlm",
+                        "title": "tlm",
+                        "type": "group"
+                    },
+                    {
+                        "array": 9,
+                        "name": "protocols.swiwin.tlm.bind",
+                        "title": "bind",
+                        "type": "bind"
+                    },
+                    {
+                        "array": 9,
+                        "name": "protocols.swiwin.tlm.mult",
+                        "title": "mult",
+                        "type": "real"
+                    },
+                    {
+                        "array": 9,
+                        "name": "protocols.swiwin.tlm.label",
+                        "title": "label",
+                        "type": "string"
+                    },
+                    {
+                        "name": "protocols.swiwin.status",
+                        "title": "status",
+                        "type": "option",
+                        "units": "off,on"
+                    },
+                    {
+                        "name": "protocols.canas",
+                        "title": "CANAS",
+                        "type": "group"
+                    },
+                    {
+                        "name": "protocols.canas.mode",
+                        "title": "mode",
+                        "type": "option",
+                        "units": "off,NODE,LAN"
+                    },
+                    {
+                        "name": "protocols.canas.id",
+                        "title": "id",
+                        "type": "byte"
+                    },
+                    {
+                        "name": "protocols.canas.nodeID",
                         "title": "nodeID",
                         "type": "byte"
                     },
                     {
-                        "name": "protocols.srvas.security",
+                        "name": "protocols.canas.security",
                         "title": "security",
                         "type": "byte"
                     },
                     {
-                        "name": "protocols.srvas.interval",
+                        "name": "protocols.canas.interval",
                         "title": "interval",
                         "type": "option",
                         "units": "10ms,50ms,100ms"
                     },
                     {
-                        "name": "protocols.srvas.ctr",
+                        "name": "protocols.canas.ctr",
                         "title": "ctr",
                         "type": "group"
                     },
                     {
                         "array": 8,
-                        "name": "protocols.srvas.ctr.MsgID",
+                        "name": "protocols.canas.ctr.MsgID",
                         "title": "MsgID",
-                        "type": "byte"
+                        "type": "word"
                     },
                     {
                         "array": 8,
-                        "name": "protocols.srvas.ctr.OutCH",
+                        "name": "protocols.canas.ctr.OutCH",
                         "title": "OutCH",
                         "type": "byte"
                     },
                     {
                         "array": 8,
-                        "name": "protocols.srvas.ctr.FbID",
+                        "name": "protocols.canas.ctr.FbID",
                         "title": "FbID",
-                        "type": "byte"
+                        "type": "word"
                     },
                     {
                         "array": 8,
-                        "name": "protocols.srvas.ctr.FbBind",
+                        "name": "protocols.canas.ctr.FbBind",
                         "title": "FbBind",
                         "type": "bind"
                     },
                     {
                         "array": 8,
-                        "name": "protocols.srvas.ctr.FbMult",
+                        "name": "protocols.canas.ctr.FbMult",
                         "title": "FbMult",
                         "type": "real"
                     },
                     {
                         "array": 8,
-                        "name": "protocols.srvas.ctr.FbBias",
+                        "name": "protocols.canas.ctr.FbBias",
                         "title": "FbBias",
                         "type": "real"
+                    },
+                    {
+                        "name": "protocols.canas.tx",
+                        "title": "tx",
+                        "type": "group"
+                    },
+                    {
+                        "array": 6,
+                        "name": "protocols.canas.tx.ID",
+                        "title": "ID",
+                        "type": "word"
+                    },
+                    {
+                        "array": 6,
+                        "name": "protocols.canas.tx.Bind",
+                        "title": "Bind",
+                        "type": "bind"
+                    },
+                    {
+                        "array": 6,
+                        "name": "protocols.canas.tx.Type",
+                        "title": "Type",
+                        "type": "option",
+                        "units": "FLOAT,LONG,ULONG,SHORT,USHORT,CHAR,UCHAR"
+                    },
+                    {
+                        "array": 6,
+                        "name": "protocols.canas.tx.label",
+                        "title": "label",
+                        "type": "string"
+                    },
+                    {
+                        "name": "protocols.canas.rx",
+                        "title": "rx",
+                        "type": "group"
+                    },
+                    {
+                        "array": 6,
+                        "name": "protocols.canas.rx.ID",
+                        "title": "ID",
+                        "type": "word"
+                    },
+                    {
+                        "array": 6,
+                        "name": "protocols.canas.rx.Bind",
+                        "title": "Bind",
+                        "type": "bind"
+                    },
+                    {
+                        "array": 6,
+                        "name": "protocols.canas.rx.label",
+                        "title": "label",
+                        "type": "string"
                     },
                     {
                         "name": "protocols.volz",
@@ -2442,6 +2759,95 @@
                         "name": "controls.mixer.ch_xpl",
                         "title": "ch_xpl",
                         "type": "text"
+                    },
+                    {
+                        "name": "vcp",
+                        "title": "Interfaces",
+                        "type": "group"
+                    },
+                    {
+                        "name": "vcp.udp1",
+                        "title": "udp1",
+                        "type": "group"
+                    },
+                    {
+                        "name": "vcp.udp1.mode",
+                        "title": "mode",
+                        "type": "option",
+                        "units": "off,NODE,LAN,NMT,BUS,TELEMETRY,IDENT"
+                    },
+                    {
+                        "name": "vcp.udp1.name",
+                        "title": "name",
+                        "type": "string"
+                    },
+                    {
+                        "name": "vcp.udp1.id",
+                        "title": "id",
+                        "type": "byte"
+                    },
+                    {
+                        "name": "vcp.udp1.host",
+                        "title": "host",
+                        "type": "string"
+                    },
+                    {
+                        "name": "vcp.udp1.dport",
+                        "title": "dport",
+                        "type": "word"
+                    },
+                    {
+                        "name": "vcp.udp1.port",
+                        "title": "port",
+                        "type": "word"
+                    },
+                    {
+                        "name": "vcp.udp1.codec",
+                        "title": "codec",
+                        "type": "option",
+                        "units": "off,COBS"
+                    },
+                    {
+                        "name": "vcp.udp2",
+                        "title": "udp2",
+                        "type": "group"
+                    },
+                    {
+                        "name": "vcp.udp2.mode",
+                        "title": "mode",
+                        "type": "option",
+                        "units": "off,NODE,LAN,NMT,BUS,TELEMETRY,IDENT"
+                    },
+                    {
+                        "name": "vcp.udp2.name",
+                        "title": "name",
+                        "type": "string"
+                    },
+                    {
+                        "name": "vcp.udp2.id",
+                        "title": "id",
+                        "type": "byte"
+                    },
+                    {
+                        "name": "vcp.udp2.host",
+                        "title": "host",
+                        "type": "string"
+                    },
+                    {
+                        "name": "vcp.udp2.dport",
+                        "title": "dport",
+                        "type": "word"
+                    },
+                    {
+                        "name": "vcp.udp2.port",
+                        "title": "port",
+                        "type": "word"
+                    },
+                    {
+                        "name": "vcp.udp2.codec",
+                        "title": "codec",
+                        "type": "option",
+                        "units": "off,COBS"
                     },
                     {
                         "name": "sim",
@@ -2667,7 +3073,7 @@
                         "type": "text"
                     }
                 ],
-                "time": 1739975767706
+                "time": 1789756334221
             },
             "info": {
                 "busy": false,
@@ -2677,20 +3083,20 @@
                     "mission",
                     "script"
                 ],
-                "format": false,
+                "format": 0,
                 "hardware": "APX",
-                "hash": "266EC66D",
+                "hash": "6F7DDE4D",
                 "host": {
-                    "hostname": "slava",
-                    "uid": "13444B88EB56B46B5B409ABE313425F4428F5E1C",
+                    "hostname": "slava-2",
+                    "uid": "B3C7DF10A252A3D9767F5C467C56A7C8B5D23065",
                     "username": "vs"
                 },
                 "name": "sim",
                 "reconf": false,
                 "uid": "73696D2E4150580000000000",
-                "version": "11.2.6"
+                "version": "11.2.24"
             },
-            "time": 1740290271498,
+            "time": 1793192409103,
             "values": {
                 "controls.mixer.bind": [
                     "ctr.att.ail",
@@ -2766,8 +3172,12 @@
                 "ins.gyro.dlpf": 30,
                 "ins.gyro.lpf": 30,
                 "ins.gyro.nfbw": 20,
-                "ins.hsrc": "gps",
                 "ins.mode": "local",
+                "ins.pos.bearing": 45,
+                "ins.pos.dist": 100,
+                "ins.pos.gate": 10,
+                "ins.pos.gnss": "always",
+                "ins.pos.sacc": 1,
                 "label": "FW10",
                 "script.code": "launch,0000046C78DA8D934B4FDB401485F7FE15477493A03436B07300D5453C2241889220608526F6753CED64C69A47D2A8E2BFF74E12A05D54AD25CBF2CC3DDF9CFB98F430C1218AF1138AE04D2B95F168ADF946A5C769E37D9BA769654AD70F62655CBF34CB731644CD856937562E1A8F4ED9C571969D7C3ECE8EB31E0A25C5774712536F857752092F024E9DF8F20783E314B600074B8EEC8AAA3D7AD648875A2A027F5B613D4CBDF5386D84A50AB7726E8595E4FABF0BD8F6C28A65D4D49608CED47ECDF1393626A0149A8FA9A4F356CE8367B487D0556A2C96A692F52672782DE88A2C7C43F064972E9E1C7FAE470FB825C736714D9AAC501887B992259B29493B82600771C535EC70BEC545E155B432DD5BC19561BEF0D2E81E48F2BEC58AACE37F9CBC1DB507F6606C8474848F09589836EABAEC7A03AEE987F46F55F848B682D45B76635A4EAC6124A7BA96DC81392138AA83EA450407E37138BBB97F98A1183DE3B1984C8AD1EC79C0C1BE31BC4B2BDAA1E4B25592C99C9715DA6FD87E24DC5D4E2E6E58527C1DDE0E67CF9C04AE86B3D1E5748AABFB090A8C8BC96C78F1705B4C307E988CEFA7977D604AD11645C0BF2B5D6F7BC6D5ACC80BA9DEA7E099DBECD8A4AAD0881571BB4B923C5510287958FFBB95912594D18B6DD2ACF9286B1FC31ADAF81E1C3B7EBB20EBF5BABFD0A16FEC22553B864BCFA3AD34493E495DAA5071B4687FF49BF324094E327BF9E2D647380370C7732894385DEEBE795E7A9BE7A45779EED6F13D3A1F0069AA44D065932489D41E4B2175A79BFC4C18B063750E8C7ED9C51C74071C0F17E6AEE409A0641B65C907AB910D92D724B97C1ADF4F66581959E15DF70E94353A5B689EAF840AD4E9E2EC0C475DECB6E3E31451DB39CAB2AC3B785FDC6BF617A19385FDDE6B3CF21791D768CD,0000013078DA458ECD4AC4301485CFCD4FA73608DD082EE61504DD891B0DBE840B21CDD8E014269962ABE042127F16326E7C2CB7BE856FE134CEC2BB387CDFB95CB8B0832700342F1A1623C586223D4D81AC683035003B11DC8507E9175D6881CCC2DFBA11F4570F2BE77AB0CC851FDC683A702EB89010927A22929C40C5018FA43FBFA022F4479933CBEC5416DEF9F5DD23C3DE3A9895BD0F374B48E16D175054C6B476B4C68596933266E96C6F1676709C55577C0E0DFD5DE8F49E12EA340DCEB0C9A2A18EC12E348E765E3FE7E52590CEAFF7A17F66F54B2EF231EAD78C4A95A8DF7674C8A053A9AAFF7FA037A5A2DF2D25AF4BCA",
                 "script.mode": "auto",
@@ -2820,6 +3230,7 @@
                 "shiva.pitch.cmd.max": 30,
                 "shiva.pitch.cmd.slew": 20,
                 "shiva.pitch.gain.low": 2,
+                "shiva.pitch.ktas": "on",
                 "shiva.pitch.tc": 1,
                 "shiva.roll.Kff": 1,
                 "shiva.roll.Ki": 2.5,
@@ -2831,7 +3242,9 @@
                 "shiva.roll.cmd.slew": 25,
                 "shiva.roll.gain.high": 0.8,
                 "shiva.roll.gain.low": 1,
+                "shiva.roll.ktas": "on",
                 "shiva.roll.tc": 0.4,
+                "shiva.safety.geo": "avoid",
                 "shiva.spd.Ki": 0.5,
                 "shiva.spd.Kp": 0.7,
                 "shiva.spd.Li": 25,
@@ -2842,6 +3255,7 @@
                 "shiva.spd.slew": 2,
                 "shiva.spd.tc": 3,
                 "shiva.spd.weight": 1,
+                "shiva.spd.wgain": 1,
                 "shiva.takeoff.check.hdg": 45,
                 "shiva.takeoff.check.xtrack": 10,
                 "shiva.takeoff.climb.altitude": 60,
@@ -2876,19 +3290,17 @@
                     1
                 ],
                 "telemetry.data.aux": [
-                    "sns.pwr.vsys",
-                    "sns.air.temp",
                     "ctr.sw.sw1"
                 ],
                 "telemetry.mode": "always"
             }
         }
     ],
-    "time": 1740290271498,
+    "time": 1793192409103,
     "title": "FW10",
     "unit": {
         "name": "SIM",
-        "time": 1740290271462,
+        "time": 1793192408834,
         "type": "UAV",
         "uid": "73696D2E415058000053494D"
     }

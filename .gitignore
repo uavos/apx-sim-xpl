@@ -3,3 +3,4 @@
 *.acf~
 .directory
 *.bak
+*_prefs.txt
