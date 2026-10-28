@@ -2,7 +2,7 @@
     "nodes": [
         {
             "dict": {
-                "cache": "78FCCF2D",
+                "cache": "6F7DDE4D",
                 "fields": [
                     {
                         "name": "label",
@@ -61,6 +61,11 @@
                         "name": "ident.vcp.id",
                         "title": "id",
                         "type": "byte"
+                    },
+                    {
+                        "name": "ident.id",
+                        "title": "id",
+                        "type": "string"
                     },
                     {
                         "name": "telemetry",
@@ -407,6 +412,98 @@
                         "units": "Hz"
                     },
                     {
+                        "name": "ins.acc.grav",
+                        "title": "grav",
+                        "type": "option",
+                        "units": "auto,off"
+                    },
+                    {
+                        "name": "ins.mag",
+                        "title": "mag",
+                        "type": "group"
+                    },
+                    {
+                        "name": "ins.mag.est",
+                        "title": "est",
+                        "type": "option",
+                        "units": "auto,heading,init,disable"
+                    },
+                    {
+                        "name": "ins.mag.decl",
+                        "title": "decl",
+                        "type": "option",
+                        "units": "auto,constant,mandala,disabled"
+                    },
+                    {
+                        "name": "ins.mag.dv",
+                        "title": "dv",
+                        "type": "real",
+                        "units": "deg"
+                    },
+                    {
+                        "name": "ins.pos",
+                        "title": "pos",
+                        "type": "group"
+                    },
+                    {
+                        "name": "ins.pos.hsrc",
+                        "title": "hsrc",
+                        "type": "option",
+                        "units": "baro,gps,range,vision"
+                    },
+                    {
+                        "name": "ins.pos.gnss",
+                        "title": "gnss",
+                        "type": "option",
+                        "units": "auto,manual,always,disabled"
+                    },
+                    {
+                        "name": "ins.pos.gate",
+                        "title": "gate",
+                        "type": "byte"
+                    },
+                    {
+                        "name": "ins.pos.sacc",
+                        "title": "sacc",
+                        "type": "byte",
+                        "units": "m/s"
+                    },
+                    {
+                        "name": "ins.pos.dist",
+                        "title": "dist",
+                        "type": "word",
+                        "units": "m"
+                    },
+                    {
+                        "name": "ins.pos.bearing",
+                        "title": "bearing",
+                        "type": "byte",
+                        "units": "deg"
+                    },
+                    {
+                        "name": "ins.air",
+                        "title": "air",
+                        "type": "group"
+                    },
+                    {
+                        "name": "ins.air.baro",
+                        "title": "baro",
+                        "type": "option",
+                        "units": "sensor,off"
+                    },
+                    {
+                        "name": "ins.air.pitot",
+                        "title": "pitot",
+                        "type": "option",
+                        "units": "sensor,mandala,raw,blocked"
+                    },
+                    {
+                        "name": "ins.air.min",
+                        "title": "min",
+                        "type": "byte",
+                        "units": "m/s"
+                    },
+                    {
                         "name": "ins.agl",
                         "title": "agl",
                         "type": "group"
@@ -440,58 +537,6 @@
                         "title": "aid",
                         "type": "word",
                         "units": "m"
-                    },
-                    {
-                        "name": "ins.air",
-                        "title": "air",
-                        "type": "group"
-                    },
-                    {
-                        "name": "ins.air.baro",
-                        "title": "baro",
-                        "type": "option",
-                        "units": "sensor,off"
-                    },
-                    {
-                        "name": "ins.air.pitot",
-                        "title": "pitot",
-                        "type": "option",
-                        "units": "sensor,mandala,raw,blocked"
-                    },
-                    {
-                        "name": "ins.air.min",
-                        "title": "min",
-                        "type": "byte",
-                        "units": "m/s"
-                    },
-                    {
-                        "name": "ins.mag",
-                        "title": "mag",
-                        "type": "group"
-                    },
-                    {
-                        "name": "ins.mag.est",
-                        "title": "est",
-                        "type": "option",
-                        "units": "auto,heading,init,disable"
-                    },
-                    {
-                        "name": "ins.mag.decl",
-                        "title": "decl",
-                        "type": "option",
-                        "units": "auto,constant,mandala,disabled"
-                    },
-                    {
-                        "name": "ins.mag.dv",
-                        "title": "dv",
-                        "type": "real",
-                        "units": "deg"
-                    },
-                    {
-                        "name": "ins.hsrc",
-                        "title": "hsrc",
-                        "type": "option",
-                        "units": "baro,gps,range,vision"
                     },
                     {
                         "name": "ins.tune",
@@ -1359,6 +1404,83 @@
                         "units": "m/s^2"
                     },
                     {
+                        "name": "shiva.swarm",
+                        "title": "Swarm",
+                        "type": "group"
+                    },
+                    {
+                        "name": "shiva.swarm.mode",
+                        "title": "mode",
+                        "type": "option",
+                        "units": "off,master,slave"
+                    },
+                    {
+                        "name": "shiva.swarm.id",
+                        "title": "id",
+                        "type": "word"
+                    },
+                    {
+                        "name": "shiva.swarm.offset",
+                        "title": "Offset",
+                        "type": "group"
+                    },
+                    {
+                        "name": "shiva.swarm.offset.dx",
+                        "title": "dx",
+                        "type": "real",
+                        "units": "m"
+                    },
+                    {
+                        "name": "shiva.swarm.offset.dy",
+                        "title": "dy",
+                        "type": "real",
+                        "units": "m"
+                    },
+                    {
+                        "name": "shiva.swarm.offset.dz",
+                        "title": "dz",
+                        "type": "real",
+                        "units": "m"
+                    },
+                    {
+                        "name": "shiva.swarm.bearing",
+                        "title": "Bearing",
+                        "type": "group"
+                    },
+                    {
+                        "name": "shiva.swarm.bearing.tc",
+                        "title": "tc",
+                        "type": "real",
+                        "units": "s"
+                    },
+                    {
+                        "name": "shiva.swarm.bearing.kp",
+                        "title": "kp",
+                        "type": "real"
+                    },
+                    {
+                        "name": "shiva.swarm.bearing.limit",
+                        "title": "limit",
+                        "type": "real",
+                        "units": "deg"
+                    },
+                    {
+                        "name": "shiva.swarm.speed",
+                        "title": "Speed",
+                        "type": "group"
+                    },
+                    {
+                        "name": "shiva.swarm.speed.kp",
+                        "title": "kp",
+                        "type": "real"
+                    },
+                    {
+                        "name": "shiva.swarm.speed.lp",
+                        "title": "lp",
+                        "type": "real",
+                        "units": "m/s"
+                    },
+                    {
                         "name": "shiva.eng",
                         "title": "Engine",
                         "type": "group"
@@ -1881,6 +2003,17 @@
                         "units": "%"
                     },
                     {
+                        "name": "shiva.guide.acc",
+                        "title": "acc",
+                        "type": "byte",
+                        "units": "m/s^2"
+                    },
+                    {
+                        "name": "shiva.guide.vcp",
+                        "title": "vcp",
+                        "type": "byte"
+                    },
+                    {
                         "name": "shiva.takeoff",
                         "title": "Takeoff",
                         "type": "group"
@@ -2138,8 +2271,7 @@
                     {
                         "name": "script.stop",
                         "title": "Stop",
-                        "type": "command",
-                        "units": "deg/s"
+                        "type": "command"
                     },
                     {
                         "name": "script.mode",
@@ -2150,8 +2282,7 @@
                     {
                         "name": "script.code",
                         "title": "code",
-                        "type": "script",
-                        "units": "mgauss"
+                        "type": "script"
                     },
                     {
                         "name": "protocols",
@@ -2161,19 +2292,18 @@
                     {
                         "name": "protocols.mode",
                         "title": "mode",
-                        "type": "option"
+                        "type": "option",
+                        "units": "off,on"
                     },
                     {
                         "name": "protocols.sbus",
                         "title": "SBUS",
-                        "type": "group",
-                        "units": "deg/s"
+                        "type": "group"
                     },
                     {
                         "name": "protocols.sbus.sbusctr",
                         "title": "CTR",
-                        "type": "group",
-                        "units": "deg/s"
+                        "type": "group"
                     },
                     {
                         "name": "protocols.sbus.sbusctr.mode",
@@ -2195,8 +2325,7 @@
                     {
                         "name": "protocols.sbus.sbusrc",
                         "title": "RC",
-                        "type": "group",
-                        "units": "m/s^2"
+                        "type": "group"
                     },
                     {
                         "name": "protocols.sbus.sbusrc.mode",
@@ -2218,14 +2347,13 @@
                     {
                         "name": "protocols.sbus.sbusrc.chrc",
                         "title": "chrc",
-                        "type": "byte",
-                        "units": "mgauss"
+                        "type": "byte"
                     },
                     {
+                        "array": 16,
                         "name": "protocols.sbus.sbusrc.bind",
                         "title": "bind",
-                        "type": "bind",
-                        "units": "mgauss"
+                        "type": "bind"
                     },
                     {
                         "name": "protocols.jetcat",
@@ -2257,8 +2385,7 @@
                     {
                         "name": "protocols.swiwin.id",
                         "title": "id",
-                        "type": "byte",
-                        "units": "mbar"
+                        "type": "byte"
                     },
                     {
                         "name": "protocols.swiwin.tlm",
@@ -2266,26 +2393,28 @@
                         "type": "group"
                     },
                     {
+                        "array": 9,
                         "name": "protocols.swiwin.tlm.bind",
                         "title": "bind",
                         "type": "bind"
                     },
                     {
+                        "array": 9,
                         "name": "protocols.swiwin.tlm.mult",
                         "title": "mult",
-                        "type": "real",
-                        "units": "Pa"
+                        "type": "real"
                     },
                     {
+                        "array": 9,
                         "name": "protocols.swiwin.tlm.label",
                         "title": "label",
-                        "type": "string",
-                        "units": "Pa"
+                        "type": "string"
                     },
                     {
                         "name": "protocols.swiwin.status",
                         "title": "status",
-                        "type": "option"
+                        "type": "option",
+                        "units": "off,on"
                     },
                     {
                         "name": "protocols.canas",
@@ -2301,8 +2430,7 @@
                     {
                         "name": "protocols.canas.id",
                         "title": "id",
-                        "type": "byte",
-                        "units": "%"
+                        "type": "byte"
                     },
                     {
                         "name": "protocols.canas.nodeID",
@@ -2317,10 +2445,10 @@
                     {
                         "name": "protocols.canas.interval",
                         "title": "interval",
-                        "type": "option"
+                        "type": "option",
+                        "units": "10ms,50ms,100ms"
                     },
                     {
-                        "array": 16,
                         "name": "protocols.canas.ctr",
                         "title": "ctr",
                         "type": "group"
@@ -2344,11 +2472,13 @@
                         "type": "word"
                     },
                     {
+                        "array": 8,
                         "name": "protocols.canas.ctr.FbBind",
                         "title": "FbBind",
                         "type": "bind"
                     },
                     {
+                        "array": 8,
                         "name": "protocols.canas.ctr.FbMult",
                         "title": "FbMult",
                         "type": "real"
@@ -2360,7 +2490,6 @@
                         "type": "real"
                     },
                     {
-                        "array": 32,
                         "name": "protocols.canas.tx",
                         "title": "tx",
                         "type": "group"
@@ -2381,28 +2510,25 @@
                         "array": 6,
                         "name": "protocols.canas.tx.Type",
                         "title": "Type",
-                        "type": "option"
+                        "type": "option",
+                        "units": "FLOAT,LONG,ULONG,SHORT,USHORT,CHAR,UCHAR"
                     },
                     {
                         "array": 6,
                         "name": "protocols.canas.tx.label",
                         "title": "label",
-                        "type": "string",
-                        "units": "%"
+                        "type": "string"
                     },
                     {
-                        "array": 24,
                         "name": "protocols.canas.rx",
                         "title": "rx",
-                        "type": "group",
-                        "units": "%"
+                        "type": "group"
                     },
                     {
                         "array": 6,
                         "name": "protocols.canas.rx.ID",
                         "title": "ID",
-                        "type": "word",
-                        "units": "%"
+                        "type": "word"
                     },
                     {
                         "array": 6,
@@ -2635,6 +2761,95 @@
                         "type": "text"
                     },
                     {
+                        "name": "vcp",
+                        "title": "Interfaces",
+                        "type": "group"
+                    },
+                    {
+                        "name": "vcp.udp1",
+                        "title": "udp1",
+                        "type": "group"
+                    },
+                    {
+                        "name": "vcp.udp1.mode",
+                        "title": "mode",
+                        "type": "option",
+                        "units": "off,NODE,LAN,NMT,BUS,TELEMETRY,IDENT"
+                    },
+                    {
+                        "name": "vcp.udp1.name",
+                        "title": "name",
+                        "type": "string"
+                    },
+                    {
+                        "name": "vcp.udp1.id",
+                        "title": "id",
+                        "type": "byte"
+                    },
+                    {
+                        "name": "vcp.udp1.host",
+                        "title": "host",
+                        "type": "string"
+                    },
+                    {
+                        "name": "vcp.udp1.dport",
+                        "title": "dport",
+                        "type": "word"
+                    },
+                    {
+                        "name": "vcp.udp1.port",
+                        "title": "port",
+                        "type": "word"
+                    },
+                    {
+                        "name": "vcp.udp1.codec",
+                        "title": "codec",
+                        "type": "option",
+                        "units": "off,COBS"
+                    },
+                    {
+                        "name": "vcp.udp2",
+                        "title": "udp2",
+                        "type": "group"
+                    },
+                    {
+                        "name": "vcp.udp2.mode",
+                        "title": "mode",
+                        "type": "option",
+                        "units": "off,NODE,LAN,NMT,BUS,TELEMETRY,IDENT"
+                    },
+                    {
+                        "name": "vcp.udp2.name",
+                        "title": "name",
+                        "type": "string"
+                    },
+                    {
+                        "name": "vcp.udp2.id",
+                        "title": "id",
+                        "type": "byte"
+                    },
+                    {
+                        "name": "vcp.udp2.host",
+                        "title": "host",
+                        "type": "string"
+                    },
+                    {
+                        "name": "vcp.udp2.dport",
+                        "title": "dport",
+                        "type": "word"
+                    },
+                    {
+                        "name": "vcp.udp2.port",
+                        "title": "port",
+                        "type": "word"
+                    },
+                    {
+                        "name": "vcp.udp2.codec",
+                        "title": "codec",
+                        "type": "option",
+                        "units": "off,COBS"
+                    },
+                    {
                         "name": "sim",
                         "title": "Simulator",
                         "type": "group"
@@ -2858,7 +3073,7 @@
                         "type": "text"
                     }
                 ],
-                "time": 1762728808943
+                "time": 1789756334221
             },
             "info": {
                 "busy": false,
@@ -2870,18 +3085,18 @@
                 ],
                 "format": 0,
                 "hardware": "APX",
-                "hash": "78FCCF2D",
+                "hash": "6F7DDE4D",
                 "host": {
-                    "hostname": "slava",
-                    "uid": "13444B88EB56B46B5B409ABE313425F4428F5E1C",
+                    "hostname": "slava-2",
+                    "uid": "B3C7DF10A252A3D9767F5C467C56A7C8B5D23065",
                     "username": "vs"
                 },
                 "name": "sim",
                 "reconf": false,
                 "uid": "73696D2E4150580000000000",
-                "version": "11.2.19"
+                "version": "11.2.24"
             },
-            "time": 1770670264655,
+            "time": 1793195642290,
             "values": {
                 "controls.mixer.bind": [
                     "ctr.att.ail",
@@ -2926,10 +3141,6 @@
                     1,
                     6
                 ],
-                "ident.vcp.enable": "on",
-                "ident.vcp.id": [
-                    23
-                ],
                 "ins.acc.lpf": 30,
                 "ins.agl.gnd": 0.1,
                 "ins.agl.max": 50,
@@ -2940,10 +3151,13 @@
                 "ins.gyro.dlpf": 30,
                 "ins.gyro.lpf": 30,
                 "ins.gyro.nfbw": 20,
-                "ins.hsrc": "gps",
                 "ins.mode": "local",
+                "ins.pos.bearing": 45,
+                "ins.pos.dist": 100,
+                "ins.pos.gate": 10,
+                "ins.pos.gnss": "always",
+                "ins.pos.sacc": 1,
                 "label": "LR70",
-                "script.code": "VmexecTest,0000048D78DA8D534D6FDA4014BCFB578CD20B5404A3E49644515D04091201848D126E59EC67BCCDE2B576D71054E5BFF7AD81921EAAD6176B77DFCC9B791FE1D7005F11CD5E10D54E57526987CAE81F943ADC15CE55376198E9D4766BB1D5B69BEACD3D033CA6AFABBD91EBC2A195B671D5EB5D5F5EF5AE7A1D444A8A374B12B133C259A9841335EEACF8F60707C729340416862C992D6547EAA49016B95404FE57C238E8BCD11817C25086B15C196124D9EE6700CB5E1BB1F198DC10C1EADCED38FE067B5D231525A7C9A47546AE6AC7D40EA2CC426DB0D199CCF79E87EFEA32230357101C998DF599FDE161B2C0982CCBC403956484C2AC5E2999B298944A4B10ACC0DFD88215AE1A3A0F1C7A29F1510A869AF98593BAEC8024BF1B6CC9583EE3FA94EA48D881369EA4259C3760A02B8F6BB3EA3DB8A667E8DFAA70369B41960D77A12B365630255BDD49EEC08A505BCA6BD5F1141C8CE751F2385D2488264B3C47F379344996B71CEC0ACDAFB4A50395DC544A3233FB32A2747B96EF199E06F3FE2343A2EFA3F12859B2090C47C96410C7184EE788308BE6C9A8BF184773CC16F3D9341E748198BC2CF204FFAE74DEF48CAB99911352FD9E8225B7D9B24895A1105BE276A72479AA2090F2B0FE772B3D9750BA5C37A619732E6B17A31CA5761D58567C5A90DD6ED75D9775579B75A80E1C36BCF7B2C2E08B2C5355671C2CAAF76E711F04B274D80859B6DAC1CF00FC85214B5D73B3FCE009FB06A77D5B52A154334A1CCD43A304B61B7AA79437227D23D7407D78EBC2917517EDDBA0B932E46A53A2771B7C04C1E065369D27D86A99C1477DCEE937E2739A9BD3C3251EFAF1D13BEF802CB942BCB45E055E0F1A4E395FCF9827699B39DE897DA5BD4791FA79459C1A5939BC7AC021BC32FC9CB72E8E994FEA3F825F17A47931,000000DD78DA1D8D414EC3301444E7FB3B691423115155ADBAE202AC7A029FC431C412A8491AD52E122BBB6C60D1458FC5B188B3997933B318583F1000DA152D458AAD88112D66003253145BC16EFC94D3257860C160FD11C492054B59D044440513A8DC70247DFF838AD0B72A6B0EAB43510E6E389DBF0464703E80E5603F46C8DA98CE066BDCD8312963DE9D9DCCABF58E45FDC24FD03FBF2941A3B9A6C5D52374CA559372B157159AEF4C4AAD699E2AF5F066FBDE75CFCBCD3FF30F33C0",
                 "shiva.alt.Ki": 0.4,
                 "shiva.alt.Kp": 2,
                 "shiva.alt.gain.climb": 0.5,
@@ -2974,9 +3188,6 @@
                 "shiva.eng.rpm.start": 500,
                 "shiva.eng.thr.max": 100,
                 "shiva.eng.thr.start": 10,
-                "shiva.guide.mode": "on",
-                "shiva.guide.sgain": 2,
-                "shiva.guide.slope": 10,
                 "shiva.hover.pitch.Ki": 2,
                 "shiva.hover.pitch.Kp": 7,
                 "shiva.hover.pitch.Li": 8,
@@ -3052,29 +3263,15 @@
                 "sim.imu.noise.gyro": 0.01,
                 "sim.imu.noise.mag": 0.01,
                 "sim.pitot.noise": 0.01,
-                "telemetry.data.aux": [
-                    "sns.eng.rpm",
-                    "est.eng.drpm",
-                    "est.wpt.thdg",
-                    "est.usr.u1",
-                    "sns.vps.vx",
-                    "est.lpos.vx",
-                    "est.lpos.vy",
-                    "est.acc.y",
-                    "est.lpos.ay",
-                    "sns.air.slip"
-                ],
-                "telemetry.data.srcs": "on",
-                "telemetry.data.usr": "on",
-                "telemetry.mode": "auto"
+                "telemetry.mode": "always"
             }
         }
     ],
-    "time": 1770670264655,
+    "time": 1793195642290,
     "title": "LR70",
     "unit": {
         "name": "SIM",
-        "time": 1770670264260,
+        "time": 1793195642247,
         "type": "UAV",
         "uid": "73696D2E415058000053494D"
     }
